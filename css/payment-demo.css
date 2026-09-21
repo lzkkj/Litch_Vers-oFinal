@@ -1,0 +1,66 @@
+.plans-page button.litch-plan-card__cta {
+    width: 100%;
+    cursor: pointer;
+    font: 600 14px Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.plans-page button:focus-visible,
+.payment-demo input:focus-visible {
+    outline: 3px solid #a6e8dc;
+    outline-offset: 4px;
+}
+
+.payment-demo {
+    box-sizing: border-box;
+    width: min(460px, calc(100% - 32px));
+    max-height: calc(100vh - 32px);
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 24px;
+    overflow-y: auto;
+    border: 1px solid #76639d;
+    border-radius: 18px;
+    background: #17141f;
+    color: #f3f1fa;
+    box-shadow: 0 24px 90px #0009;
+    font-family: Arial, sans-serif;
+}
+
+.payment-demo::backdrop { background: #080810cc; }
+.plans-page .payment-demo__fallback { display: none; }
+.payment-demo * { box-sizing: border-box; }
+.payment-demo__header, .payment-demo__total { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.payment-demo__tag { color: #a6e8dc; font-size: 11px; letter-spacing: 1.5px; }
+.payment-demo__close { width: 40px; height: 40px; border: 1px solid #61537f; border-radius: 8px; background: transparent; color: #fff; font-size: 26px; cursor: pointer; }
+.payment-demo h2 { margin: 18px 0 12px; color: #fff; font-size: 25px; }
+.payment-demo p { font-size: 13px; line-height: 1.6; color: #c7c1d5; }
+.payment-demo__notice { padding: 12px; background: #262032; border-radius: 8px; }
+.payment-demo__total { margin: 22px 0; font-size: 14px; }
+.payment-demo__total strong { color: #a6e8dc; font-size: 24px; }
+.payment-demo__total strong span { font-size: 12px; color: #c7c1d5; }
+.payment-demo__card { min-width: 0; margin: 0 0 20px; padding: 16px; border: 1px solid #453b58; border-radius: 10px; }
+.payment-demo__card legend { padding: 0 6px; color: #c4b4ff; font-size: 14px; }
+.payment-demo label { display: block; margin: 12px 0 6px; font-size: 12px; color: #c7c1d5; }
+.payment-demo input { display: block; width: 100%; min-width: 0; padding: 12px 10px; border: 1px solid #453b58; border-radius: 6px; color: #eeeaf5; background: #100e18; font: 14px Arial, sans-serif; }
+.payment-demo__row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.payment-demo__card p { margin-bottom: 0; font-size: 12px; }
+.payment-demo__confirmation summary { padding: 15px; border-radius: 8px; background: #b9a4ff; color: #171020; font-size: 14px; font-weight: bold; cursor: pointer; line-height: 1.5; }
+.payment-demo__confirmation summary:hover { background: #cabaFF; }
+.payment-demo__success { padding: 16px; margin-top: 12px; border: 1px solid #537e75; border-radius: 8px; background: #142824; }
+.payment-demo__success h3 { margin: 0; font-size: 18px; color: #a6e8dc; }
+.payment-demo__success p { margin-bottom: 0; }
+.payment-demo__back { display: block; margin: 18px auto 0; padding: 10px; background: transparent; border: 0; color: #d0c2ff; text-decoration: underline; cursor: pointer; font: 14px Arial, sans-serif; }
+
+@media (max-width: 400px) {
+    .payment-demo { padding: 18px; }
+    .payment-demo__total strong { font-size: 21px; }
+}
+
+/* Alternativa sem JavaScript para navegadores sem a API Popover. */
+@supports not selector(:popover-open) {
+    .plans-page [popovertarget] { display: none; }
+    .plans-page .payment-demo__fallback { display: block; }
+    .payment-demo { display: none; position: static; margin: 24px auto; max-height: none; }
+    .payment-demo:target { display: block; }
+}

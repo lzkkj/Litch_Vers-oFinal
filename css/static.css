@@ -1,0 +1,29 @@
+/* Adaptações para navegação sem JavaScript. */
+body{margin:0;font-family:Arial,sans-serif;color:#d9d5e8}
+*,*::before,*::after{box-sizing:border-box}
+.litch-trial-checkout,.litch-trial-form{grid-template-columns:minmax(0,1fr)}
+.litch-trial-form a{color:#8ce3ff}
+.litch-trial-form p{line-height:1.7}
+.litch-carousel__track{scrollbar-width:thin;scrollbar-color:#7c5cff #15131f}
+.litch-carousel__track::-webkit-scrollbar{display:block;height:10px}
+.litch-carousel__track::-webkit-scrollbar-thumb{background:#7c5cff;border-radius:8px}
+.litch-card{cursor:default}
+.community-page .litch-review-card__top{flex-wrap:wrap;gap:8px}
+.community-page .litch-review-card__top>div:not(.litch-review-card__stars){min-width:0}
+.site-skip{position:absolute;left:16px;top:-100px;padding:14px;background:#0b0b12;color:#fff;z-index:100}
+.site-skip:focus{top:12px}
+.litch-footer a{color:#8ce3ff}
+.community-page .litch-community-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.litch-carousel__track:focus-visible{outline:3px solid #a6e8dc;outline-offset:5px}
+@media(max-width:1000px){.community-page .litch-community-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.litch-carousel__header{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+.community-page img.litch-review-card__avatar{object-fit:cover;flex-shrink:0}
+.community-page .community-name--karinayoo{color:#ff6464}
+.community-page .community-name--barbosa{color:#ffffff}
+.community-page .community-name--hashogeki{color:#66b3ff}
+.animate-card,.about-card,.about-platform__item,.about-differential,.catalog-card,.litch-review-card,.litch-plan-card,.help-faq article {opacity:1;transform:none}
+header{flex-wrap:wrap;gap:18px}.litch-nav{display:flex;flex-wrap:wrap;gap:12px 20px;white-space:normal;height:auto}
+.litch-carousel__track{overflow-x:auto!important;transform:none!important;scroll-snap-type:x proximity;padding-bottom:20px}.litch-card{scroll-snap-align:start;flex-shrink:0}
+a:focus-visible,summary:focus-visible{outline:3px solid #a6e8dc;outline-offset:5px}
+@media(max-width:700px){header{padding:18px}.litch-nav{width:100%;justify-content:flex-start}.litch-nav a{font-size:13px}}

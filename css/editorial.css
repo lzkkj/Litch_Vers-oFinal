@@ -1,0 +1,66 @@
+/* Páginas editoriais: catálogo, parceiros e Blog. Somente HTML e CSS. */
+@import url('static.css');
+.editorial{margin:0;background:#0e0e16;color:#f3f1fa;font-family:Inter,Arial,sans-serif;animation:none}
+.editorial *{box-sizing:border-box}
+.editorial header{border-bottom:1px solid #292837;box-shadow:none;padding:20px 4%;gap:24px}
+.editorial .header__brand{text-decoration:none;display:flex;align-items:center;gap:10px}
+.editorial .header__brand img{height:34px;width:auto}
+.editorial .title{font-size:28px;margin:0}
+.editorial .litch-nav{gap:12px 20px}
+.editorial .litch-nav a{font-size:13px}
+.editorial main{max-width:1180px;margin:auto;padding:0 32px}
+.editorial a{color:#c4b4ff;text-underline-offset:5px}
+.editorial h1,.editorial h2,.editorial h3,.editorial h4{font-family:'Chakra Petch',Arial,sans-serif;color:#f3f1fa;line-height:1.15;padding:0;margin:0 0 18px;text-transform:none;letter-spacing:-.025em}
+.editorial h1{font-size:22px;margin:20px 0}
+.editorial h2{font-size:clamp(26px,3vw,38px)}
+.editorial h3{font-size:22px}.editorial h4{font-size:24px}
+.editorial p{color:#b7b4c6;line-height:1.8;font-size:15px;margin:0 0 20px}
+.editorial .intro{padding:72px 0 48px;max-width:750px}
+.editorial .lead{font:600 clamp(40px,6vw,72px)/1.08 'Chakra Petch',Arial,sans-serif;letter-spacing:-.045em;color:#f3f1fa;margin-bottom:25px}
+.editorial em{font-style:normal;color:#b5a0ff}
+.editorial .intro>p:not(.lead){max-width:600px}
+.editorial .eyebrow{font-size:10px;letter-spacing:1.7px;color:#a6e8dc;font-weight:600;display:block;margin-bottom:14px;text-transform:uppercase}
+.editorial .pill{display:inline-block;border:1px solid #61537f;padding:12px 20px;border-radius:40px;text-decoration:none;margin-top:8px;font-size:14px}
+.editorial .pill:hover,.editorial .categories a:hover{background:#272039}
+.editorial .spotlight{display:grid;grid-template-columns:1.2fr 1fr;overflow:hidden;background:#191724;border:1px solid #333041;border-radius:16px}
+.editorial .spotlight>img{width:100%;height:100%;max-height:420px;min-height:0;object-fit:contain;object-position:center;display:block;align-self:center;background:#101018;padding:16px}
+.editorial .spotlight>div{padding:38px}.editorial .spotlight h2{font-size:38px}
+.editorial .tag{display:inline-block;font-size:11px;padding:6px 10px;background:#292437;border-radius:4px;margin:0 8px 20px 0;color:#d2c9ea}
+.editorial .small{font-size:12px;color:#a7a2b8}
+.editorial .block{padding:60px 0;border-bottom:1px solid #292837}
+.editorial .section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:28px}
+.editorial .section-head h2{max-width:600px;margin-bottom:0}
+.editorial .muted{font-size:12px;color:#aaa3bd;white-space:nowrap}
+.editorial .categories{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:38px}
+.editorial .categories a{padding:12px 18px;border:1px solid #3b344e;border-radius:8px;text-decoration:none;font-size:13px}
+.editorial .game-section{scroll-margin-top:25px;margin-top:36px}
+.editorial .game-section>h3{font-size:17px;color:#b9b2cc;font-weight:500;margin-bottom:22px}
+.editorial .games,.editorial .three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.editorial .game{border:1px solid #302d40;border-radius:12px;overflow:hidden;background:#16141f}
+.editorial .game>img{width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;object-position:center;display:block;background:#101018;padding:12px}
+.editorial .game-copy{padding:24px}.editorial .game .eyebrow{font-size:9px;letter-spacing:1px}
+.editorial .game p{font-size:13px}.editorial .game details{font-size:12px}
+.editorial details{border-top:1px solid #383146;padding-top:16px;color:#c7bbeb}
+.editorial summary{cursor:pointer;line-height:1.6}.editorial details p{margin-top:15px}
+.editorial .quiet{background:#15131e;border-radius:16px;padding:40px;margin:52px 0}
+.editorial .number{display:block;color:#a6e8dc;font:28px 'Chakra Petch',sans-serif;margin:20px 0}
+.editorial .quiet h3{font-size:20px}.editorial .quiet a{font-size:13px}
+.editorial .partner{border:1px solid #302d40;border-radius:12px;overflow:hidden}
+.editorial .partner img{display:block;width:100%;height:160px;object-fit:contain;background:#151521}
+.editorial .partner>div{padding:26px}.editorial .partner p{font-size:14px}
+.editorial .partner--vyra{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);align-items:center;background:#17141f}
+.editorial .partner--vyra .partner__brand{display:flex;align-items:center;justify-content:center;min-height:230px;background:#151521;color:#b5a0ff;font:700 clamp(42px,7vw,80px) Arial,sans-serif;letter-spacing:.08em}
+.editorial .partner--vyra p:last-child{margin-bottom:0}
+@media(max-width:600px){.editorial .partner--vyra{grid-template-columns:minmax(0,1fr)}.editorial .partner--vyra .partner__brand{min-height:170px}}
+.editorial .future{display:flex;align-items:center;gap:40px;justify-content:space-between}
+.editorial .future p{max-width:640px}.editorial .future-mark{font-size:100px;color:#b5a0ff;font-weight:200}
+.editorial .reading{max-width:760px}
+.editorial .post{padding:30px;border:1px solid #353044;border-radius:12px;background:#17141f;display:flex;flex-direction:column}
+.editorial .post h3{font-size:25px}.editorial .post a{margin-top:auto;font-size:13px}
+.editorial .articles{max-width:760px;margin:auto}
+.editorial .articles article{padding:24px 0 55px;margin-bottom:36px;border-bottom:1px solid #302d40;scroll-margin-top:30px}
+.editorial .litch-footer{margin-top:50px;background:transparent}.editorial .litch-footer p{font-size:12px}
+.skip{position:absolute;top:-100px;left:16px;background:#0e0e16;padding:16px;z-index:100}.skip:focus{top:10px}
+@media(max-width:900px){.editorial .games,.editorial .three{grid-template-columns:repeat(2,minmax(0,1fr))}.editorial .spotlight{grid-template-columns:1fr 1fr}.editorial .spotlight>div{padding:24px}.editorial .spotlight h2{font-size:30px}}
+@media(max-width:600px){.editorial main{padding:0 20px}.editorial .intro{padding:45px 0 30px}.editorial .games,.editorial .three,.editorial .spotlight{grid-template-columns:1fr}.editorial .spotlight>img{height:220px}.editorial .section-head{display:block}.editorial .muted{display:block;margin-top:15px}.editorial .block{padding:40px 0}.editorial .quiet{padding:25px}.editorial .game>img{height:auto}.editorial .future-mark{display:none}.editorial .litch-nav{gap:12px 16px}.editorial .litch-nav a{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.editorial *{animation:none!important;transition:none!important}}
