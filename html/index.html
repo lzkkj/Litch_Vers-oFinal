@@ -1,231 +1,590 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="icon" type="image/png" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/experience.css">
+
     <title>Litch</title>
-<link rel="stylesheet" href="../css/static.css">
-<link rel="stylesheet" href="../css/home.css">
 </head>
 
-<body class="home-page">
-    <header>
-        <div class="header__brand">
-            <img src="../images/LitchLogo.png" alt="litch logo">
-            <h1 class="title">Litch</h1>
-        </div>
+<body data-page="home">
 
 
-        <nav class="litch-nav" aria-label="Navegação principal"><a href="index.html" class="is-active" aria-current="page">Home</a><a href="sobre.html">Sobre</a><a href="game-store.html">Produtos</a><a href="parceiros.html">Parceiros</a><a href="blog.html">Blog</a><a href="litch_plus_plans.html">Litch+</a><a href="community.html">Community</a><a href="help-me.html">FAQ</a></nav>
+<!-- =====================================================
+     HEADER
+====================================================== -->
 
-        
-    </header>
+<header>
 
-    <hr>
-
-    <main>
-        <section id="home" class="litch-carousel">
-            <div class="litch-carousel__header">
-                <span class="litch-carousel__eyebrow">SELEÇÃO LITCH</span>
-                <h2 class="litch-carousel__title">Jogos em destaque</h2>
-            </div>
+    <div class="header__brand">
+        <img src="../images/LitchLogo.png" alt="Litch logo">
+        <h1 class="title">Litch</h1>
+    </div>
 
 
-            <div class="litch-carousel__track-wrap">
-                
+    <nav class="litch-nav">
 
-                <div class="litch-carousel__track" id="litchTrack" tabindex="0" role="region" aria-label="Jogos em destaque — use as setas do teclado para percorrer">
+        <a href="index.html" class="is-active">
+            Home
+        </a>
 
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/eldenring.jpg" alt="Arte de Elden Ring">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch+</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">Elden Ring</h3>
-                            <p class="litch-card__status">Seleção demonstrativa Litch+</p>
-                        </div>
-                    </article>
+        <a href="game-store.html">
+            Game Store
+        </a>
 
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/eafc26.jpg" alt="Arte de EA FC 26">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch+</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">EA FC 26</h3>
-                            <p class="litch-card__status">Seleção demonstrativa Litch+</p>
-                        </div>
-                    </article>
+        <a href="litch+.html">
+            Litch+
+        </a>
 
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/crimsondesert.jpg" alt="Arte de Crimson Desert">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">Crimson Desert</h3>
-                            <p class="litch-card__status">No catálogo demonstrativo</p>
-                        </div>
-                    </article>
+        <a href="community.html">
+            Community
+        </a>
 
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/gtav.jpg" alt="Arte de GTA V">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch+</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">GTA V</h3>
-                            <p class="litch-card__status">Seleção demonstrativa Litch+</p>
-                        </div>
-                    </article>
+        <a href="about.html">
+            About
+        </a>
 
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/tlou1.jpg" alt="Arte de The Last of Us Part I">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">The Last of Us Part I</h3>
-                            <p class="litch-card__status">No catálogo demonstrativo</p>
-                        </div>
-                    </article>
-
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2277560/library_600x900.jpg" alt="Arte de Wuchang">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">Wuchang</h3>
-                            <p class="litch-card__status">No catálogo demonstrativo</p>
-                        </div>
-                    </article>
-
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/persona5.jpg" alt="Arte de Persona 5">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch+</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">Persona 5</h3>
-                            <p class="litch-card__status">Seleção demonstrativa Litch+</p>
-                        </div>
-                    </article>
-
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/rdr2.jpeg" alt="Arte de Red Dead Redemption 2">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch+</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">Red Dead Redemption 2</h3>
-                            <p class="litch-card__status">Seleção demonstrativa Litch+</p>
-                        </div>
-                    </article>
-
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/baldurs_gate3.jpg" alt="Arte de Baldur's Gate 3">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">Baldur's Gate 3</h3>
-                            <p class="litch-card__status">No catálogo demonstrativo</p>
-                        </div>
-                    </article>
-
-                    <article class="litch-card">
-                        <img class="litch-card__img" src="../images/gow-rag.jpg" alt="Arte de God of War: Ragnarök">
-                        <div class="litch-card__scrim"></div>
-                        <span class="litch-card__tag">Litch</span>
-                        <div class="litch-card__body">
-                            <h3 class="litch-card__name">God of War: Ragnarök</h3>
-                            <p class="litch-card__status">No catálogo demonstrativo</p>
-                        </div>
-                    </article>
-                </div>
-
-                
-            </div>
-
-            <a class="home-catalog-link" href="game-store.html">Explorar todos os produtos →</a>
-        </section>
-
-        <section id="explorar" class="home-explore" aria-labelledby="explore-title">
-            <span class="home-explore__eyebrow">CONTINUE EXPLORANDO</span>
-            <h2 id="explore-title">Conheça o universo Litch</h2>
-            <p class="home-explore__intro">Escolha seu próximo destino e descubra tudo o que o site oferece.</p>
-            <div class="home-explore__grid">
-                <a class="home-explore__card" href="game-store.html">
-                    <h3>Produtos</h3>
-                    <p>Encontre sua próxima aventura no catálogo de jogos.</p>
-                    <span class="home-explore__cta">Explorar o catálogo <span aria-hidden="true">→</span></span>
-                </a>
-                <a class="home-explore__card" href="litch_plus_plans.html">
-                    <h3>Litch+</h3>
-                    <p>Conheça os planos e a proposta de benefícios da assinatura.</p>
-                    <span class="home-explore__cta">Conhecer os planos <span aria-hidden="true">→</span></span>
-                </a>
-                <a class="home-explore__card" href="community.html">
-                    <h3>Community</h3>
-                    <p>Explore o espaço dedicado à comunidade Litch.</p>
-                    <span class="home-explore__cta">Visitar a comunidade <span aria-hidden="true">→</span></span>
-                </a>
-                <a class="home-explore__card" href="sobre.html">
-                    <h3>Sobre a Litch</h3>
-                    <p>Descubra a história, a missão e a proposta do projeto.</p>
-                    <span class="home-explore__cta">Conhecer a Litch <span aria-hidden="true">→</span></span>
-                </a>
-                <a class="home-explore__card" href="parceiros.html">
-                    <h3>Parceiros</h3>
-                    <p>Conheça os projetos e as ideias que se conectam à Litch.</p>
-                    <span class="home-explore__cta">Ver parceiros <span aria-hidden="true">→</span></span>
-                </a>
-                <a class="home-explore__card" href="blog.html">
-                    <h3>Blog</h3>
-                    <p>Leia dicas e guias para aproveitar suas próximas partidas.</p>
-                    <span class="home-explore__cta">Explorar o Blog <span aria-hidden="true">→</span></span>
-                </a>
-                <a class="home-explore__card" href="help-me.html">
-                    <h3>FAQ e ajuda</h3>
-                    <p>Tire suas dúvidas sobre o catálogo e a plataforma.</p>
-                    <span class="home-explore__cta">Consultar perguntas frequentes <span aria-hidden="true">→</span></span>
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="litch-footer">
-
-        <p>
-            © 2026 Litch. Todos os direitos reservados.
-        </p>
-
-        <p>
-            Desenvolvido por
-            <strong>
-                Gustavo de Toledo Gomes &amp; Lucas Baldan
-            </strong>
-        </p>
-
-        <p>
-            Parceria com VYRA
-            <strong>
-                Bruno Barbosa &amp; Julio Milheiro
-            </strong>
-        </p>
+        <a href="partners.html">
+            Partners
+        </a>
 
         <a href="help-me.html">
             Help-Me!
         </a>
 
-    </footer>
+    </nav>
 
 
-    <!-- ================= Litch Game Hover Preview ================= -->
-    
+    <button
+        class="litch-search-btn"
+        aria-label="Pesquisar jogos"
+    >
 
-    
-    
+        <svg viewBox="0 0 24 24">
 
+            <circle
+                cx="11"
+                cy="11"
+                r="7">
+            </circle>
+
+            <path
+                d="M16.5 16.5L21 21">
+            </path>
+
+        </svg>
+
+    </button>
+
+</header>
+
+
+<hr>
+
+
+<main>
+
+
+<!-- =====================================================
+     CARROSSEL
+
+     AQUI VOCÊ MANTÉM O SEU CARROSSEL ATUAL INTEIRO
+====================================================== -->
+
+<section
+    id="home"
+    class="litch-carousel"
+>
+
+    <div class="litch-carousel__header">
+
+        <span class="litch-carousel__eyebrow">
+            Litch Picks
+        </span>
+
+        <h2 class="litch-carousel__title">
+            Top Picks This Week
+        </h2>
+
+    </div>
+
+
+    <div class="litch-carousel__track-wrap">
+
+
+        <button
+            class="litch-carousel__arrow litch-carousel__arrow--prev"
+            aria-label="Previous"
+        >
+
+            <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+            >
+
+                <path d="M15 18l-6-6 6-6"/>
+
+            </svg>
+
+        </button>
+
+
+
+        <div
+            class="litch-carousel__track"
+            id="litchTrack"
+        >
+
+
+            <!-- SEUS CARDS ATUAIS FICAM AQUI -->
+
+
+            <article class="litch-card">
+
+                <img
+                    class="litch-card__img"
+                    src="../images/eldenring.jpg"
+                    alt="Elden Ring"
+                >
+
+                <div class="litch-card__scrim"></div>
+
+                <span class="litch-card__tag">
+                    Litch+
+                </span>
+
+                <div class="litch-card__body">
+
+                    <h3 class="litch-card__name">
+                        Elden Ring
+                    </h3>
+
+                    <p class="litch-card__status">
+                        In Store and Litch+
+                    </p>
+
+                </div>
+
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/eafc26.jpg" alt="Nome do jogo 2">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch+</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">EA FC 26</h3>
+                <p class="litch-card__status">In Store and Litch+</p>
+                </div>
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/crimsondesert.jpg" alt="Nome do jogo 3">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">Crimson Desert</h3>
+                <p class="litch-card__status">In Store</p>
+                </div>
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/gtav.jpg" alt="Nome do jogo 4">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch+</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">GTA V</h3>
+                <p class="litch-card__status">In Store and Litch+</p>
+                </div>
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/tlou1.jpg" alt="Nome do jogo 5">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">The Last of Us Part I</h3>
+                <p class="litch-card__status">In Store</p>
+                </div>
+            </article>
+            
+            <article class="litch-card">
+                <img class="litch-card__img" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2277560/library_600x900.jpg" alt="Nome do jogo 6">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">Wu Chang</h3>
+                <p class="litch-card__status">In Store</p>
+                </div>
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/persona5.jpg" alt="Nome do jogo 7">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch+</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">Persona 5</h3>
+                <p class="litch-card__status">In Store and Litch+</p>
+                </div>
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/rdr2.jpeg" alt="Nome do jogo 8">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch+</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">Red Dead Redemption 2</h3>
+                <p class="litch-card__status">In Store and Litch+</p>
+                </div>
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/baldurs_gate3.jpg" alt="Nome do jogo 9">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">Baldur's Gate 3</h3>
+                <p class="litch-card__status">In Store</p>
+                </div>
+            </article>
+
+            <article class="litch-card">
+                <img class="litch-card__img" src="../images/gow-rag.jpg" alt="Nome do jogo 10">
+                <div class="litch-card__scrim"></div>
+                <span class="litch-card__tag">Litch</span>
+                <div class="litch-card__body">
+                <h3 class="litch-card__name">God of War: Ragnorak</h3>
+                <p class="litch-card__status">In Store</p>
+                </div>
+            </article>
+
+        </div>
+
+        <button class="litch-carousel__arrow litch-carousel__arrow--next" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+
+    </div>
+
+    <div class="litch-carousel__dots" id="litchDots"></div>
+
+</section>
+
+
+<!-- =====================================================
+     APRESENTAÇÃO
+====================================================== -->
+
+<section class="home-introduction">
+
+
+    <div class="home-introduction__content">
+
+        <span class="home-eyebrow">
+            WELCOME TO LITCH
+        </span>
+
+
+        <h2>
+            Your games.
+            <span>Your place.</span>
+        </h2>
+
+
+        <p>
+            Discover new worlds, explore our game catalog,
+            connect with other players and experience a new
+            way to play with Litch+.
+        </p>
+
+
+        <a
+            href="about.html"
+            class="home-introduction__button"
+        >
+
+            Discover Litch
+
+            <span>→</span>
+
+        </a>
+
+    </div>
+
+
+    <div class="home-introduction__visual">
+
+        <a class="home-introduction__word" href="game-store.html">
+            PLAY
+        </a>
+
+        <a class="home-introduction__word" href="about.html">
+            DISCOVER
+        </a>
+
+        <a class="home-introduction__word" href="community.html">
+            CONNECT
+        </a>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPLORE LITCH
+====================================================== -->
+
+<section class="home-explore">
+
+
+    <div class="home-explore__header">
+
+        <span class="home-eyebrow">
+            EXPLORE
+        </span>
+
+        <h2>
+            Find your place in Litch.
+        </h2>
+
+    </div>
+
+
+
+    <div class="home-explore__grid">
+
+
+        <!-- =========================
+             GAME STORE
+        ========================== -->
+
+        <a
+            href="game-store.html"
+            class="home-explore-card"
+        >
+
+
+            <img
+                src="../images/tlou1.jpg"
+                alt="Game Store"
+            >
+
+
+            <div class="home-explore-card__shade"></div>
+
+
+            <div class="home-explore-card__content">
+
+                <span>
+                    01 / STORE
+                </span>
+
+                <h3>
+                    Game Store
+                </h3>
+
+                <p>
+                    Discover new releases,
+                    exclusive deals and your
+                    next favorite game.
+                </p>
+
+            </div>
+
+
+            <div class="home-explore-card__arrow">
+                ↗
+            </div>
+
+
+        </a>
+
+
+
+        <!-- =========================
+             LITCH+
+        ========================== -->
+
+        <a
+            href="litch+.html"
+            class="home-explore-card home-explore-card--plus"
+        >
+
+
+            <img
+                src="../images/LitchLogo.png"
+                alt="Litch+"
+            >
+
+
+            <div class="home-explore-card__shade"></div>
+
+
+            <div class="home-explore-card__content">
+
+                <span>
+                    02 / PREMIUM
+                </span>
+
+                <h3>
+                    Litch+
+                </h3>
+
+                <p>
+                    Play anywhere and discover
+                    our growing Litch+ library.
+                </p>
+
+            </div>
+
+
+            <div class="home-explore-card__arrow">
+                ↗
+            </div>
+
+
+        </a>
+
+
+
+        <!-- =========================
+             COMMUNITY
+        ========================== -->
+
+        <a
+            href="community.html"
+            class="home-explore-card home-explore-card--community"
+        >
+
+
+            <div class="home-community-visual">
+
+                <span>★</span>
+
+                <strong>
+                    COMMUNITY
+                </strong>
+
+            </div>
+
+
+            <div class="home-explore-card__shade"></div>
+
+
+            <div class="home-explore-card__content">
+
+                <span>
+                    03 / CONNECT
+                </span>
+
+                <h3>
+                    Community
+                </h3>
+
+                <p>
+                    Meet players, read reviews
+                    and be part of Litch.
+                </p>
+
+            </div>
+
+
+            <div class="home-explore-card__arrow">
+                ↗
+            </div>
+
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL
+====================================================== -->
+
+<section class="home-final">
+
+    <span class="home-eyebrow">
+        READY?
+    </span>
+
+    <h2>
+        What will you play next?
+    </h2>
+
+    <a
+        href="game-store.html"
+        class="home-final__button"
+    >
+        Explore Games →
+    </a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="litch-footer">
+
+    <p>
+        © 2026 Litch. All rights reserved.
+    </p>
+
+
+    <p>
+
+        Developed by
+
+        <strong>
+            Gustavo de Toledo Gomes & Lucas Baldan
+        </strong>
+
+    </p>
+    <a class="litch-footer__partners" href="parceiros.html">
+        Partners: VYRA — Julio Milheiro &amp; Bruno Barbosa
+    </a>
+
+<a href="help-me.html">
+        Help-Me!
+    </a>
+
+</footer>
+
+
+<script
+    src="../js/animations.js"
+    defer>
+</script>
+
+<script
+    src="../js/animationsarrows_2.js"
+    defer>
+</script>
+
+<script src="../js/experience.js" defer></script>
 </body>
 
 </html>
-

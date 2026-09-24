@@ -1,35 +1,46 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt_br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../images/favicon.ico">
     <link rel="stylesheet" href="../css/style.css">
-    <title>Litch — Planos Litch+</title>
-<link rel="stylesheet" href="../css/static.css">
-<link rel="stylesheet" href="../css/payment-demo.css">
+    <link rel="stylesheet" href="../css/experience.css">
+    <title>Litch — Litch+ Plans</title>
 </head>
-
-<body class="plans-page">
-
+<body data-page="plans">
     <header>
-        <a class="header__brand" href="index.html" aria-label="Litch — página inicial">
+        <div class="header__brand">
             <img src="../images/LitchLogo.png" alt="litch logo">
             <h1 class="title">Litch</h1>
-        </a>
+        </div>
 
-        <nav class="litch-nav" aria-label="Navegação principal"><a href="index.html">Home</a><a href="sobre.html">Sobre</a><a href="game-store.html">Produtos</a><a href="parceiros.html">Parceiros</a><a href="blog.html">Blog</a><a href="litch_plus_plans.html" class="is-active" aria-current="page">Litch+</a><a href="community.html">Community</a><a href="help-me.html">FAQ</a></nav>
+        <nav class="litch-nav">
+            <a href="index.html">Home</a>
+            <a href="game-store.html">Game Store</a>
+            <a href="litch+.html" class="is-active">Litch+</a>
+            <a href="community.html">Community</a>
+            <a href="about.html">About</a>
+            <a href="partners.html">Partners</a>
+            <a href="help-me.html">Help-Me!</a>
+        </nav>
+
+        <button class="litch-search-btn" aria-label="Pesquisar jogos">
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M16.5 16.5L21 21"></path>
+            </svg>
+        </button>
     </header>
 
     <hr>
 
     <main>
-        <section class="litch-plans-page" id="planos">
+        <section class="litch-plans-page">
 
             <!-- Fundo colado com capas do catálogo, escurecido -->
-            <section class="litch-plans-bg" aria-hidden="true">
+            <div class="litch-plans-bg" aria-hidden="true">
                 <img src="../images/eldenring.jpg" alt="">
                 <img src="../images/eafc26.jpg" alt="">
                 <img src="../images/crimsondesert.jpg" alt="">
@@ -46,237 +57,71 @@
                 <img src="../images/Hades-2.png" alt="">
                 <img src="../images/diablo4.jpg" alt="">
                 <img src="../images/streetfighter6.jpg" alt="">
-            </section>
+            </div>
+            <div class="litch-plans-bg__scrim" aria-hidden="true"></div>
 
-            <section class="litch-plans-bg__scrim" aria-hidden="true"></section>
-
-            <section class="litch-plans-page__content">
+            <div class="litch-plans-page__content">
                 <span class="litch-plus-hero__tag">Litch+</span>
-                <h2 class="litch-plans-page__title">Escolha seu plano</h2>
-
+                <h2 class="litch-plans-page__title">Choose Your Plan</h2>
                 <p class="litch-plans-page__subtitle">
-                    Conheça os benefícios de cada plano e simule sua assinatura. Demonstração fictícia, sem cobrança.
+                    Stream instantly, play on any device, and unlock exclusive member benefits.
                 </p>
 
-                <section class="litch-plans-grid litch-plans-grid--large">
+                <div class="litch-plans-grid litch-plans-grid--large">
 
                     <article class="litch-plan-card litch-plan-card--large">
                         <h3 class="litch-plan-card__name">Basic</h3>
-                        <p class="litch-plan-card__price">R$ 19,90<span>/mês</span></p>
-
+                        <p class="litch-plan-card__price">R$ 19,90<span>/mo</span></p>
                         <ul class="litch-plan-card__features">
-                            <li>Streaming em até 1080p</li>
-                            <li>1 dispositivo por vez</li>
-                            <li>Acesso à biblioteca Litch+</li>
+                            <li>Up to 1080p streaming</li>
+                            <li>1 device at a time</li>
+                            <li>Access to Litch+ library</li>
                         </ul>
-
-                        <button class="litch-plan-card__cta" type="button" popovertarget="pagamento-basic">Escolher Basic</button>
-                        <a class="litch-plan-card__cta payment-demo__fallback" href="#pagamento-basic">Escolher Basic</a>
+                        <button class="litch-plan-card__cta">Choose Basic</button>
                     </article>
 
                     <article class="litch-plan-card litch-plan-card--large litch-plan-card--featured">
-                        <span class="litch-plan-card__badge">Mais popular</span>
+                        <span class="litch-plan-card__badge">Most Popular</span>
                         <h3 class="litch-plan-card__name">Standard</h3>
-                        <p class="litch-plan-card__price">R$ 34,90<span>/mês</span></p>
-
+                        <p class="litch-plan-card__price">R$ 34,90<span>/mo</span></p>
                         <ul class="litch-plan-card__features">
-                            <li>Streaming em até 1440p</li>
-                            <li>2 dispositivos por vez</li>
-                            <li>Acesso à biblioteca Litch+</li>
-                            <li>Acessos exclusivos para membros</li>
+                            <li>Up to 1440p streaming</li>
+                            <li>2 devices at a time</li>
+                            <li>Access to Litch+ library</li>
+                            <li>Exclusive member accesses</li>
                         </ul>
-
-                        <button class="litch-plan-card__cta" type="button" popovertarget="pagamento-standard">Escolher Standard</button>
-                        <a class="litch-plan-card__cta payment-demo__fallback" href="#pagamento-standard">Escolher Standard</a>
+                        <button class="litch-plan-card__cta">Choose Standard</button>
                     </article>
 
                     <article class="litch-plan-card litch-plan-card--large">
                         <h3 class="litch-plan-card__name">Ultra</h3>
-                        <p class="litch-plan-card__price">R$ 69,90<span>/mês</span></p>
-
+                        <p class="litch-plan-card__price">R$ 69,90<span>/mo</span></p>
                         <ul class="litch-plan-card__features">
-                            <li>Streaming em até 4K</li>
-                            <li>4 dispositivos por vez</li>
-                            <li>Acesso à biblioteca Litch+</li>
-                            <li>Descontos exclusivos</li>
-                            <li>Acesso antecipado a lançamentos</li>
+                            <li>Up to 4K streaming</li>
+                            <li>4 devices at a time</li>
+                            <li>Access to Litch+ library</li>
+                            <li>Exclusive member discounts</li>
+                            <li>Early access to new releases</li>
                         </ul>
-
-                        <button class="litch-plan-card__cta" type="button" popovertarget="pagamento-ultra">Escolher Ultra</button>
-                        <a class="litch-plan-card__cta payment-demo__fallback" href="#pagamento-ultra">Escolher Ultra</a>
+                        <button class="litch-plan-card__cta">Choose Ultra</button>
                     </article>
 
-                </section>
-            </section>
+                </div>
+            </div>
 
         </section>
     </main>
 
-    <section class="payment-demo" id="pagamento-basic" popover role="dialog" aria-labelledby="titulo-basic" aria-describedby="aviso-basic">
-
-        <section class="payment-demo__header">
-            <span class="payment-demo__tag">LITCH+ · SIMULAÇÃO</span>
-            <button class="payment-demo__close" type="button" popovertarget="pagamento-basic" popovertargetaction="hide" aria-label="Fechar pagamento do plano Basic">×</button>
-        </section>
-
-        <h2 id="titulo-basic">Assinar Litch+ Basic</h2>
-
-        <p id="aviso-basic" class="payment-demo__notice">Pagamento fictício para demonstração. Nenhuma cobrança ou assinatura será realizada.</p>
-
-        <section class="payment-demo__total">
-            <span>Plano mensal</span>
-            <strong>R$ 19,90<span>/mês</span></strong>
-        </section>
-
-        <fieldset class="payment-demo__card">
-            <legend>Cartão de demonstração</legend>
-
-            <label for="titular-basic">Nome no cartão</label>
-            <input id="titular-basic" type="text" value="CLIENTE FICTÍCIO" readonly>
-
-            <label for="numero-basic">Número fictício</label>
-            <input id="numero-basic" type="text" value="0000 0000 0000 0000" readonly>
-
-            <section class="payment-demo__row">
-                <section>
-                    <label for="validade-basic">Validade</label>
-                    <input id="validade-basic" type="text" value="12/2030" readonly>
-                </section>
-
-                <section>
-                    <label for="codigo-basic">Código fictício</label>
-                    <input id="codigo-basic" type="text" value="000" readonly>
-                </section>
-            </section>
-
-            <p>Dados ilustrativos fixos. Não é necessário informar dados pessoais.</p>
-        </fieldset>
-
-        <details class="payment-demo__confirmation">
-            <summary>Simular pagamento de R$ 19,90</summary>
-
-            <section class="payment-demo__success">
-                <h3>Simulação concluída!</h3>
-                <p>Você escolheu o Litch+ Basic por R$ 19,90/mês nesta demonstração. Nenhum valor foi cobrado e nenhuma assinatura foi ativada.</p>
-            </section>
-        </details>
-
-        <button class="payment-demo__back" type="button" popovertarget="pagamento-basic" popovertargetaction="hide">Voltar aos planos</button>
-        <a class="payment-demo__back payment-demo__fallback" href="#planos">Voltar aos planos</a>
-    </section>
-
-    <section class="payment-demo" id="pagamento-standard" popover role="dialog" aria-labelledby="titulo-standard" aria-describedby="aviso-standard">
-
-        <section class="payment-demo__header">
-            <span class="payment-demo__tag">LITCH+ · SIMULAÇÃO</span>
-            <button class="payment-demo__close" type="button" popovertarget="pagamento-standard" popovertargetaction="hide" aria-label="Fechar pagamento do plano Standard">×</button>
-        </section>
-
-        <h2 id="titulo-standard">Assinar Litch+ Standard</h2>
-
-        <p id="aviso-standard" class="payment-demo__notice">Pagamento fictício para demonstração. Nenhuma cobrança ou assinatura será realizada.</p>
-
-        <section class="payment-demo__total">
-            <span>Plano mensal</span>
-            <strong>R$ 34,90<span>/mês</span></strong>
-        </section>
-
-        <fieldset class="payment-demo__card">
-            <legend>Cartão de demonstração</legend>
-
-            <label for="titular-standard">Nome no cartão</label>
-            <input id="titular-standard" type="text" value="CLIENTE FICTÍCIO" readonly>
-
-            <label for="numero-standard">Número fictício</label>
-            <input id="numero-standard" type="text" value="0000 0000 0000 0000" readonly>
-
-            <section class="payment-demo__row">
-                <section>
-                    <label for="validade-standard">Validade</label>
-                    <input id="validade-standard" type="text" value="12/2030" readonly>
-                </section>
-
-                <section>
-                    <label for="codigo-standard">Código fictício</label>
-                    <input id="codigo-standard" type="text" value="000" readonly>
-                </section>
-            </section>
-
-            <p>Dados ilustrativos fixos. Não é necessário informar dados pessoais.</p>
-        </fieldset>
-
-        <details class="payment-demo__confirmation">
-            <summary>Simular pagamento de R$ 34,90</summary>
-
-            <section class="payment-demo__success">
-                <h3>Simulação concluída!</h3>
-                <p>Você escolheu o Litch+ Standard por R$ 34,90/mês nesta demonstração. Nenhum valor foi cobrado e nenhuma assinatura foi ativada.</p>
-            </section>
-        </details>
-
-        <button class="payment-demo__back" type="button" popovertarget="pagamento-standard" popovertargetaction="hide">Voltar aos planos</button>
-        <a class="payment-demo__back payment-demo__fallback" href="#planos">Voltar aos planos</a>
-    </section>
-
-    <section class="payment-demo" id="pagamento-ultra" popover role="dialog" aria-labelledby="titulo-ultra" aria-describedby="aviso-ultra">
-
-        <section class="payment-demo__header">
-            <span class="payment-demo__tag">LITCH+ · SIMULAÇÃO</span>
-            <button class="payment-demo__close" type="button" popovertarget="pagamento-ultra" popovertargetaction="hide" aria-label="Fechar pagamento do plano Ultra">×</button>
-        </section>
-
-        <h2 id="titulo-ultra">Assinar Litch+ Ultra</h2>
-
-        <p id="aviso-ultra" class="payment-demo__notice">Pagamento fictício para demonstração. Nenhuma cobrança ou assinatura será realizada.</p>
-
-        <section class="payment-demo__total">
-            <span>Plano mensal</span>
-            <strong>R$ 69,90<span>/mês</span></strong>
-        </section>
-
-        <fieldset class="payment-demo__card">
-            <legend>Cartão de demonstração</legend>
-
-            <label for="titular-ultra">Nome no cartão</label>
-            <input id="titular-ultra" type="text" value="CLIENTE FICTÍCIO" readonly>
-
-            <label for="numero-ultra">Número fictício</label>
-            <input id="numero-ultra" type="text" value="0000 0000 0000 0000" readonly>
-
-            <section class="payment-demo__row">
-                <section>
-                    <label for="validade-ultra">Validade</label>
-                    <input id="validade-ultra" type="text" value="12/2030" readonly>
-                </section>
-
-                <section>
-                    <label for="codigo-ultra">Código fictício</label>
-                    <input id="codigo-ultra" type="text" value="000" readonly>
-                </section>
-            </section>
-
-            <p>Dados ilustrativos fixos. Não é necessário informar dados pessoais.</p>
-        </fieldset>
-
-        <details class="payment-demo__confirmation">
-            <summary>Simular pagamento de R$ 69,90</summary>
-
-            <section class="payment-demo__success">
-                <h3>Simulação concluída!</h3>
-                <p>Você escolheu o Litch+ Ultra por R$ 69,90/mês nesta demonstração. Nenhum valor foi cobrado e nenhuma assinatura foi ativada.</p>
-            </section>
-        </details>
-
-        <button class="payment-demo__back" type="button" popovertarget="pagamento-ultra" popovertargetaction="hide">Voltar aos planos</button>
-        <a class="payment-demo__back payment-demo__fallback" href="#planos">Voltar aos planos</a>
-    </section>
-
     <footer class="litch-footer">
-        <p>© 2026 Litch. Todos os direitos reservados.</p>
-        <p>Desenvolvido por <strong>Gustavo de Toledo Gomes &amp; Lucas Baldan</strong>.</p>
-        <a href="help-me.html">Precisa de ajuda? Fale com o Help-Me!</a>
+        <p>© 2026 Litch. All rights reserved.</p>
+        <p>Developed by <strong>Gustavo de Toledo Gomes &amp; Lucas Baldan</strong></p>
+    <a class="litch-footer__partners" href="parceiros.html">
+        Partners: VYRA — Julio Milheiro &amp; Bruno Barbosa
+    </a>
+
+        <a href="help-me.html">Help-Me!</a>
     </footer>
 
+<script src="../js/experience.js" defer></script>
 </body>
-
 </html>

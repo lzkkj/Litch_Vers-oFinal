@@ -1,0 +1,1757 @@
+/* =========================================================
+   ABOUT LITCH
+========================================================= */
+
+
+/* =========================================================
+   CONFIGURAÇÃO GERAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.about-body {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(87, 64, 180, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 10% 60%,
+            rgba(48, 155, 255, 0.08),
+            transparent 35%
+        ),
+        #090812;
+
+    color: #ffffff;
+}
+
+/* =========================================================
+   ABOUT STORY
+========================================================= */
+
+.about-story {
+    display: grid;
+
+    grid-template-columns:
+        0.9fr
+        1.1fr;
+
+    gap: 100px;
+
+    margin-bottom: 170px;
+
+    padding:
+        70px
+        0;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+
+.story-title h2 {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            63px
+        );
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+}
+
+
+.story-content {
+    padding-top: 25px;
+}
+
+
+.story-content p {
+    margin:
+        0
+        0
+        22px;
+
+    color: #9795a3;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+
+/* =========================================================
+   ECOSYSTEM
+========================================================= */
+
+.ecosystem-section {
+    margin-bottom: 180px;
+}
+
+
+.ecosystem-header {
+    max-width: 700px;
+
+    margin-bottom: 55px;
+}
+
+
+.ecosystem-header h2 {
+    margin:
+        0
+        0
+        20px;
+
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            75px
+        );
+
+    line-height: 1.05;
+}
+
+
+.ecosystem-header p {
+    color: #92909e;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   GRID DOS ATALHOS
+========================================================= */
+
+.ecosystem-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+
+/* =========================================================
+   CARD DE ATALHO
+========================================================= */
+
+.ecosystem-card {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        55px
+        1fr
+        40px;
+
+    gap: 20px;
+
+    align-items: start;
+
+    min-height: 190px;
+
+    padding:
+        32px;
+
+    overflow: hidden;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.ecosystem-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+
+    height: 250px;
+
+    right: -140px;
+
+    bottom: -160px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            83,
+            173,
+            255,
+            0.08
+        );
+
+    filter:
+        blur(20px);
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+.ecosystem-card:hover {
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(
+            100,
+            199,
+            255,
+            0.38
+        );
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(74, 156, 255, 0.1),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    box-shadow:
+        0 25px 60px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.ecosystem-card:hover::before {
+    transform:
+        scale(1.4);
+}
+
+
+
+/* =========================================================
+   CARD LITCH+ EM DESTAQUE
+========================================================= */
+
+.ecosystem-featured {
+    border-color:
+        rgba(
+            115,
+            99,
+            255,
+            0.28
+        );
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(105, 88, 255, 0.12),
+            rgba(53, 126, 211, 0.05)
+        );
+}
+
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.ecosystem-number {
+    position: relative;
+
+    z-index: 1;
+
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.ecosystem-content {
+    position: relative;
+
+    z-index: 1;
+}
+
+
+.ecosystem-category {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #64c7ff;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.ecosystem-content h3 {
+    margin:
+        0
+        0
+        12px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+
+.ecosystem-content p {
+    max-width: 360px;
+
+    margin: 0;
+
+    color: #95939f;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =========================================================
+   SETA
+========================================================= */
+
+.ecosystem-arrow {
+    position: relative;
+
+    z-index: 1;
+
+    color: #696673;
+
+    font-size: 24px;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.ecosystem-card:hover
+.ecosystem-arrow {
+    color: #64c7ff;
+
+    transform:
+        translate(
+            4px,
+            -4px
+        );
+}
+
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.values-section {
+    margin-bottom: 180px;
+}
+
+
+.values-header {
+    margin-bottom: 50px;
+}
+
+
+.values-header h2 {
+    margin: 0;
+
+    font-size:
+        clamp(
+            42px,
+            5vw,
+            68px
+        );
+}
+
+
+
+/* =========================================================
+   GRID DOS VALUES
+========================================================= */
+
+.values-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+
+
+/* =========================================================
+   VALUE CARD
+========================================================= */
+
+.value-card {
+    padding:
+        30px
+        25px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.025
+        );
+
+    border-top:
+        1px solid
+        rgba(
+            100,
+            199,
+            255,
+            0.35
+        );
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.value-card:hover {
+    transform:
+        translateY(-5px);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        );
+}
+
+
+.value-card span {
+    display: block;
+
+    margin-bottom: 45px;
+
+    color: #64c7ff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.value-card h3 {
+    margin:
+        0
+        0
+        12px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+}
+
+
+.value-card p {
+    margin: 0;
+
+    color: #8d8b97;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.about-page {
+
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    padding:
+        100px
+        0
+        130px;
+
+}
+
+
+
+/* =========================================================
+   LABELS
+========================================================= */
+
+.about-label {
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #64c7ff;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+}
+
+
+
+/* =========================================================
+   HERO / ABOUT LITCH
+========================================================= */
+
+.about-hero {
+
+    max-width: 850px;
+
+    margin-bottom: 150px;
+
+}
+
+
+.about-hero h2 {
+
+    margin: 0;
+
+    font-size: clamp(
+        52px,
+        8vw,
+        105px
+    );
+
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+
+    color: #ffffff;
+
+}
+
+
+.about-hero h2 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #64c7ff,
+            #8175ff
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.about-hero p {
+
+    max-width: 650px;
+
+    margin-top: 35px;
+
+    color: #9998a7;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+.hero-line {
+
+    width: 140px;
+
+    height: 2px;
+
+    margin-top: 40px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #64c7ff,
+            transparent
+        );
+
+}
+
+
+
+/* =========================================================
+   MISSÃO
+========================================================= */
+
+.mission-section {
+
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.2fr;
+
+    align-items: center;
+
+    gap: 90px;
+
+    margin-bottom: 180px;
+
+}
+
+
+
+/* =========================================================
+   TEXTO DA MISSÃO
+========================================================= */
+
+.mission-text h2 {
+
+    margin:
+        0
+        0
+        25px;
+
+    font-size:
+        clamp(
+            42px,
+            5vw,
+            68px
+        );
+
+}
+
+
+.mission-text p {
+
+    margin-bottom: 20px;
+
+    color: #9998a7;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+mission-text a {
+
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #64c7ff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+/* =========================================================
+   ÁREA DA IMAGEM
+========================================================= */
+
+.mission-visual {
+
+    --rotateX: 0deg;
+    --rotateY: 0deg;
+
+    position: relative;
+
+    perspective: 1000px;
+
+}
+
+
+
+/* =========================================================
+   MOLDURA ATRÁS DA IMAGEM
+========================================================= */
+
+.mission-frame {
+
+    position: absolute;
+
+    inset:
+        -22px
+        -25px
+        24px
+        30px;
+
+    border:
+        1px solid
+        rgba(83, 191, 255, 0.42);
+
+    transform:
+        rotate(-3deg);
+
+    box-shadow:
+        0 0 40px
+        rgba(70, 160, 255, 0.06);
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================================
+   CONTAINER DA IMAGEM
+========================================================= */
+
+.mission-image {
+
+    position: relative;
+
+    margin: 0;
+
+    transform:
+        rotateX(var(--rotateX))
+        rotateY(var(--rotateY));
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform 0.12s ease-out;
+
+}
+
+
+
+/* =========================================================
+   IMAGEM REAL
+========================================================= */
+
+.mission-image-content {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+
+        1px solid
+        rgba(100, 199, 255, 0.25);
+
+    background: #11101d;
+
+    box-shadow:
+
+        0 30px 80px
+        rgba(0, 0, 0, 0.45);
+
+}
+
+
+.mission-image img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 540px;
+
+    object-fit: cover;
+
+    transition:
+
+        transform 0.7s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        ),
+
+        filter 0.7s ease;
+
+}
+
+
+
+/* =========================================================
+   GRADIENTE SOBRE A IMAGEM
+========================================================= */
+
+.mission-image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            to top,
+            rgba(7, 6, 18, 0.5),
+            transparent 50%
+        );
+
+    pointer-events: none;
+
+}
+
+
+
+/* =========================================================
+   HOVER DA IMAGEM
+========================================================= */
+
+.mission-visual:hover img {
+
+    transform:
+        scale(1.045);
+
+    filter:
+        brightness(1.07)
+        saturate(1.08);
+
+}
+
+
+
+/* =========================================================
+   CAIXA SOBRE A IMAGEM
+========================================================= */
+
+.mission-game-box {
+
+    position: absolute;
+
+    right: -35px;
+
+    bottom: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    min-width: 330px;
+
+    padding:
+        22px
+        24px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(11, 10, 25, 0.96),
+            rgba(18, 17, 40, 0.92)
+        );
+
+    border:
+
+        1px solid
+        rgba(91, 190, 255, 0.6);
+
+    box-shadow:
+
+        0 15px 50px
+        rgba(0, 0, 0, 0.55),
+
+        0 0 25px
+        rgba(62, 167, 255, 0.08);
+
+    backdrop-filter:
+        blur(12px);
+
+    transform:
+        translateZ(50px);
+
+}
+
+
+.mission-game-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 115px;
+
+    top: 18px;
+
+    bottom: 18px;
+
+    width: 1px;
+
+    background:
+
+        rgba(
+            255,
+            255,
+            255,
+            0.16
+        );
+
+}
+
+
+.mission-game-box a {
+
+    color: #786cff;
+
+    font-size: 23px;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+}
+
+
+.mission-game-box span {
+
+    margin-left: 10px;
+
+    color: #cbc9d4;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.mission-game-box b {
+
+    margin-left: auto;
+
+    color: #65c9ff;
+
+    font-size: 30px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.mission-game-box:hover b {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+
+/* =========================================================
+   VISION
+========================================================= */
+
+.vision-area {
+
+    max-width: 950px;
+
+    margin:
+
+        0 auto
+        170px;
+
+}
+
+
+.vision-area > .about-label,
+.vision-area > h2,
+.vision-description {
+
+    text-align: center;
+
+}
+
+
+.vision-area h2 {
+
+    margin:
+        0
+        0
+        20px;
+
+    font-size:
+        clamp(
+            45px,
+            6vw,
+            75px
+        );
+
+}
+
+
+.vision-description {
+
+    max-width: 650px;
+
+    margin:
+
+        0 auto
+        60px;
+
+    color: #92909d;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* =========================================================
+   LISTA
+========================================================= */
+
+.vision-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+}
+
+
+
+/* =========================================================
+   CARD VISION
+========================================================= */
+
+.vision-card {
+
+    --mouse-x: 50%;
+    --mouse-y: 50%;
+
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        90px
+        1fr
+        50px;
+
+    align-items: center;
+
+    gap: 25px;
+
+    overflow: hidden;
+
+    padding:
+
+        32px
+        35px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.055),
+            rgba(255, 255, 255, 0.018)
+        );
+
+    border:
+
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 22px;
+
+    transition:
+
+        transform 0.35s ease,
+
+        border-color 0.35s ease,
+
+        background 0.35s ease;
+
+}
+
+
+
+/* EFEITO DE LUZ QUE SEGUE O MOUSE */
+
+.vision-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+
+            400px circle
+
+            at
+            var(--mouse-x)
+            var(--mouse-y),
+
+            rgba(
+                87,
+                177,
+                255,
+                0.15
+            ),
+
+            transparent 45%
+
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+
+    pointer-events: none;
+
+}
+
+
+
+/* HOVER */
+
+.vision-card:hover {
+
+    transform:
+        translateX(10px);
+
+    border-color:
+
+        rgba(
+            100,
+            199,
+            255,
+            0.4
+        );
+
+}
+
+
+.vision-card:hover::before {
+
+    opacity: 1;
+
+}
+
+
+
+/* =========================================================
+   NÚMERO
+========================================================= */
+
+.vision-number {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #65c8ff;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    opacity: 0.75;
+
+}
+
+
+
+/* =========================================================
+   CONTEÚDO
+========================================================= */
+
+.vision-content {
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+
+.vision-content h3 {
+
+    margin:
+
+        0
+        0
+        8px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+}
+
+
+.vision-content p {
+
+    margin: 0;
+
+    color: #9694a2;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =========================================================
+   SETA
+========================================================= */
+
+.vision-arrow {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #64616e;
+
+    font-size: 26px;
+
+    transition:
+
+        color 0.3s ease,
+
+        transform 0.3s ease;
+
+}
+
+
+.vision-card:hover
+.vision-arrow {
+
+    color: #65c8ff;
+
+    transform:
+        translateX(7px);
+
+}
+
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.about-final {
+
+    padding:
+
+        100px
+        40px;
+
+    text-align: center;
+
+    border-top:
+
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+}
+
+
+.about-final h2 {
+
+    margin:
+        0
+        0
+        15px;
+
+    font-size:
+
+        clamp(
+            42px,
+            6vw,
+            76px
+        );
+
+}
+
+
+.about-final p {
+
+    margin-bottom: 35px;
+
+    color: #92909e;
+
+}
+
+
+
+/* =========================================================
+   BOTÃO
+========================================================= */
+
+.about-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+
+        15px
+        25px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #6258ff,
+            #418edb
+        );
+
+    border-radius: 8px;
+
+    transition:
+
+        transform 0.3s ease,
+
+        box-shadow 0.3s ease;
+
+}
+
+
+.about-button span {
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.about-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 10px 35px
+        rgba(
+            86,
+            110,
+            255,
+            0.25
+        );
+
+}
+
+
+.about-button:hover span {
+
+    transform:
+        translateX(5px);
+
+}
+
+
+
+/* =========================================================
+   ANIMAÇÃO AO ROLAR A PÁGINA
+========================================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(45px);
+
+    transition:
+
+        opacity 0.8s ease,
+
+        transform 0.8s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+
+}
+
+
+.reveal.is-visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-page {
+
+        padding-top: 65px;
+
+    }
+
+
+    .mission-section {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 60px;
+
+    }
+
+
+    .mission-image img {
+
+        height: 450px;
+
+    }
+
+
+    .mission-game-box {
+
+        right: 20px;
+
+        bottom: 20px;
+
+    }
+
+}
+
+
+
+@media (max-width: 650px) {
+
+    .about-page {
+
+        width: 88%;
+
+    }
+
+
+    .about-hero {
+
+        margin-bottom: 100px;
+
+    }
+
+
+    .about-hero h2 {
+
+        letter-spacing: -2px;
+
+    }
+
+
+    .mission-section {
+
+        margin-bottom: 120px;
+
+    }
+
+
+    .mission-image img {
+
+        height: 340px;
+
+    }
+
+
+    .mission-frame {
+
+        inset:
+            -12px
+            -10px
+            15px
+            15px;
+
+    }
+
+
+    .mission-game-box {
+
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        width: calc(
+            100% - 30px
+        );
+
+        min-width: 0;
+
+        margin:
+
+            -25px auto
+            0;
+
+    }
+
+
+    .vision-card {
+
+        grid-template-columns:
+            50px
+            1fr
+            30px;
+
+        gap: 14px;
+
+        padding:
+
+            24px
+            20px;
+
+    }
+
+
+    .vision-number {
+
+        font-size: 25px;
+
+    }
+
+
+    .vision-content h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .vision-content p {
+
+        font-size: 13px;
+
+    }
+
+
+    .about-final {
+
+        padding:
+
+            80px
+            10px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   ACESSIBILIDADE
+
+   Caso a pessoa tenha configurado o sistema para reduzir
+   animações, o site respeita essa preferência.
+========================================================= */
+
+@media (
+    prefers-reduced-motion:
+    reduce
+) {
+
+    * {
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+
+    .reveal {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+
+    .mission-image {
+
+        transform:
+            none !important;
+
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .about-story {
+        grid-template-columns:
+            1fr;
+
+        gap: 40px;
+    }
+
+
+    .story-content {
+        padding-top: 0;
+    }
+
+
+    .values-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .about-story {
+        margin-bottom: 120px;
+    }
+
+
+    .ecosystem-section {
+        margin-bottom: 120px;
+    }
+
+
+    .ecosystem-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .ecosystem-card {
+        grid-template-columns:
+            40px
+            1fr
+            25px;
+
+        padding:
+            25px
+            20px;
+    }
+
+
+    .values-section {
+        margin-bottom: 120px;
+    }
+
+
+    .values-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .value-card span {
+        margin-bottom: 25px;
+    }
+
+}

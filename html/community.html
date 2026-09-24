@@ -1,93 +1,497 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../images/favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+    <link rel="stylesheet" href="../css/experience.css">
+
     <title>Community | Litch</title>
-<link rel="stylesheet" href="../css/static.css">
+
 </head>
 
-<body class="community-page">
-    <header><a class="header__brand" href="index.html" aria-label="Litch — página inicial"><img
-                src="../images/LitchLogo.png" alt="">
-            <h1 class="title">Litch</h1>
+
+<body data-page="community">
+
+
+<header>
+
+    <div class="header__brand">
+
+        <img
+            src="../images/LitchLogo.png"
+            alt="Litch logo"
+        >
+
+        <h1 class="title">
+            Litch
+        </h1>
+
+    </div>
+
+
+    <nav class="litch-nav">
+
+        <a href="index.html">
+            Home
         </a>
 
-        <nav class="litch-nav" aria-label="Navegação principal"><a href="index.html">Home</a><a href="sobre.html">Sobre</a><a href="game-store.html">Produtos</a><a href="parceiros.html">Parceiros</a><a href="blog.html">Blog</a><a href="litch_plus_plans.html">Litch+</a><a href="community.html" class="is-active" aria-current="page">Community</a><a href="help-me.html">FAQ</a></nav>
-    </header>
+        <a href="game-store.html">
+            Game Store
+        </a>
 
-    <hr>
+        <a href="litch+.html">
+            Litch+
+        </a>
 
-    <main>
-        <section class="community-intro" aria-labelledby="community-title">
-            <span class="about-eyebrow">Jogar é compartilhar</span>
-            <h2 id="community-title">A comunidade<br><span>da Litch.</span></h2>
-            <p>Recomendações, impressões e histórias de quem também encontra nos jogos um lugar para se conectar.</p>
-        </section>
+        <a
+            href="community.html"
+            class="is-active"
+        >
+            Community
+        </a>
 
-        <section class="community-content" aria-label="Avaliações da comunidade">
-            <section class="community-score">
-                <strong>4.8</strong><span>/ 5</span>
-                <p>exemplo fictício baseado em 2.847 avaliações</p>
-            </section>
+        <a href="about.html">
+            About
+        </a>
 
-            <section class="litch-community-grid">
-                <article class="litch-review-card">
-                    <section class="litch-review-card__top">
-                        <img class="litch-review-card__avatar" src="../images/karinayoo-icon%20-%20Copia.jpeg" alt="Foto de karinayoo" width="42" height="42">
+        <a href="partners.html">
+            Partners
+        </a>
 
-                        <section>
-                            <h3 class="community-name--karinayoo">karinayoo</h3>
-                            <span>2 dias atrás</span>
-                        </section>
+        <a href="help-me.html">
+            Help-Me!
+        </a>
 
-                        <section class="litch-review-card__stars">★★★★★</section>
-                    </section>
+    </nav>
 
-                    <p>A interface é bonita e fácil de navegar. A organização dos jogos torna tudo mais conveniente.</p>
-                </article>
 
-                <article class="litch-review-card">
-                    <section class="litch-review-card__top">
-                        <img class="litch-review-card__avatar" src="../images/barbosa-icon.jpeg" alt="Foto de barbosa" width="42" height="42">
+    <button class="litch-search-btn" aria-label="Pesquisar jogos">
+        <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M16.5 16.5L21 21"></path>
+        </svg>
+    </button>
+</header>
 
-                        <section>
-                            <h3 class="community-name--barbosa">barbosa</h3>
-                            <span>4 dias atrás</span>
-                        </section>
 
-                        <section class="litch-review-card__stars">★★★★★</section>
-                    </section>
+<hr>
 
-                    <p>O conceito da Litch é moderno, rápido e lembra as grandes plataformas gamer.</p>
-                </article>
 
-                <article class="litch-review-card">
-                    <section class="litch-review-card__top">
-                        <img class="litch-review-card__avatar" src="../images/hashogeki-icon.jpeg" alt="Foto de hashogeki" width="42" height="42">
+<main>
 
-                        <section>
-                            <h3 class="community-name--hashogeki">hashogeki</h3>
-                            <span>1 semana atrás</span>
-                        </section>
 
-                        <section class="litch-review-card__stars">★★★★☆</section>
-                    </section>
+<!-- =====================================================
+     COMMUNITY INTRO
+====================================================== -->
 
-                    <p>A variedade é muito boa. Gosto especialmente da seção de jogos online.</p>
-                </article>
-            </section>
-        </section>
-    </main>
+<section class="community-intro" id="community">
 
-    <footer class="litch-footer">
-        <p><strong>Litch</strong> — descubra seu próximo universo.</p>
-        <p>© 2026 Litch. Todos os direitos reservados.</p>
-        <a href="help-me.html">Help-Me!</a>
-    </footer>
+    <span>
+        LITCH COMMUNITY
+    </span>
+
+    <h2>
+        Games are better together.
+    </h2>
+
+    <p>
+        Discover what players think,
+        share experiences and become part
+        of the Litch community.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     SUA COMMUNITY ATUAL
+====================================================== -->
+
+<section>
+
+
+    <h2 class="Community-title">
+        Community
+    </h2>
+
+
+    <div class="litch-community-rating">
+
+        <div class="litch-community-rating__score">
+
+            <strong>
+                4.8
+            </strong>
+
+            <span>
+                / 5
+            </span>
+
+        </div>
+
+
+        <div class="litch-community-rating__stars" aria-label="5 out of 5 stars">
+            <span class="rating-star">☆</span>
+            <span class="rating-star">☆</span>
+            <span class="rating-star">☆</span>
+            <span class="rating-star">☆</span>
+            <span class="rating-star">☆</span>
+        </div>
+
+
+        <p>
+            Based on 2,847 community reviews
+        </p>
+
+    </div>
+
+
+
+    <div class="litch-community-grid">
+
+       <!-- Review 1 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">L</div>
+
+            <div>
+                <h3>Lucas</h3>
+                <span>2 days ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+        <p>
+            Litch has a really beautiful and easy-to-navigate interface.
+            The game organization also makes everything much more convenient.
+        </p>
+
+    </article>
+
+
+    <!-- Review 2 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">M</div>
+
+            <div>
+                <h3>Matheus</h3>
+                <span>4 days ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+        <p>
+            I really like Litch's concept. The design is modern,
+            fast, and reminds me of the biggest gaming platforms.
+        </p>
+
+    </article>
+
+
+    <!-- Review 3 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">A</div>
+
+            <div>
+                <h3>Andre</h3>
+                <span>1 week ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★☆
+            </div>
+
+        </div>
+
+        <p>
+            The variety of games is really good. I especially like
+            the Online Games section. Everything is very well organized.
+        </p>
+
+    </article>
+
+
+    <!-- Review 4 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">R</div>
+
+            <div>
+                <h3>Rafael</h3>
+                <span>1 week ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+        <p>
+            The platform's design is one of the things I like the most.
+            Everything feels well thought out and the information is very clear.
+        </p>
+
+    </article>
+
+
+    <!-- Review 5 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">G</div>
+
+            <div>
+                <h3>Gabriel</h3>
+                <span>2 weeks ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+        <p>
+            The experience of browsing the store is really good.
+            The banners and cards make the page much more interesting.
+        </p>
+
+    </article>
+
+
+    <!-- Review 6 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">J</div>
+
+            <div>
+                <h3>John</h3>
+                <span>2 weeks ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★☆
+            </div>
+
+        </div>
+
+        <p>
+            I really like Litch+. Having exclusive benefits
+            for subscribers makes the service even more interesting.
+        </p>
+
+    </article>
+
+
+    <!-- Review 7 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">D</div>
+
+            <div>
+                <h3>Diego</h3>
+                <span>3 weeks ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+        <p>
+            One of the best-looking game stores I've ever seen.
+            The dark style with the blue details looks perfect.
+        </p>
+
+    </article>
+
+
+    <!-- Review 8 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">P</div>
+
+            <div>
+                <h3>Peter</h3>
+                <span>3 weeks ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+        <p>
+            It's very easy to find the games I'm looking for.
+            The categories make choosing a game much easier.
+        </p>
+
+    </article>
+
+
+    <!-- Review 9 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">V</div>
+
+            <div>
+                <h3>Victor</h3>
+                <span>1 month ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★☆
+            </div>
+
+        </div>
+
+        <p>
+            I really like the concept. The platform is easy to understand
+            while still having a very professional look.
+        </p>
+
+    </article>
+
+
+    <!-- Review 10 -->
+    <article class="litch-review-card">
+
+        <div class="litch-review-card__top">
+
+            <div class="litch-review-card__avatar">F</div>
+
+            <div>
+                <h3>Felipe</h3>
+                <span>1 month ago</span>
+            </div>
+
+            <div class="litch-review-card__stars">
+                ★★★★★
+            </div>
+
+        </div>
+
+        <p>
+            Litch combines a beautiful design with a simple experience.
+            I would definitely keep using the platform.
+        </p>
+    
+    </article>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     COMMUNITY FINAL
+====================================================== -->
+
+<section class="community-final">
+
+    <span>
+        YOUR VOICE MATTERS
+    </span>
+
+    <h2>
+        Be part of Litch.
+    </h2>
+
+    <p>
+        Every player has a story,
+        a favorite game and an experience
+        worth sharing.
+    </p>
+
+    <a href="game-store.html">
+        Discover Games →
+    </a>
+
+</section>
+
+
+</main>
+
+
+<footer class="litch-footer">
+
+    <p>
+        © 2026 Litch. All rights reserved.
+    </p>
+
+    <p>
+        Developed by
+        <strong>
+            Gustavo de Toledo Gomes & Lucas Baldan
+        </strong>
+    </p>
+    <a class="litch-footer__partners" href="parceiros.html">
+        Partners: VYRA — Julio Milheiro &amp; Bruno Barbosa
+    </a>
+
+
+    <a href="help-me.html">
+        Help-Me!
+    </a>
+
+</footer>
+
+
+<script
+    src="../js/animations.js"
+    defer>
+</script>
+
+<script src="../js/experience.js" defer></script>
 </body>
-
 </html>

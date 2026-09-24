@@ -1,213 +1,1607 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Produtos | Litch</title>
-    <meta name="description" content="Produtos: descubra o universo Litch.">
-    <link rel="icon" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/editorial.css">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="../images/favicon.ico"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+    <link rel="stylesheet" href="../css/experience.css">
+
+    <title>Game Store | Litch</title>
+
 </head>
 
-<body class="editorial">
 
-<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<body data-page="store">
+
 
 <header>
-    <a class="header__brand" href="index.html">
-        <img src="../images/LitchLogo.png" alt="">
-        <span class="title">Litch</span>
-    </a>
 
-    <nav class="litch-nav" aria-label="Navegação principal">
-        <a href="index.html">Home</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="game-store.html" class="is-active" aria-current="page">Produtos</a>
-        <a href="parceiros.html">Parceiros</a>
-        <a href="blog.html">Blog</a>
-        <a href="litch_plus_plans.html">Litch+</a>
-        <a href="community.html">Community</a>
-        <a href="help-me.html">FAQ</a>
+    <div class="header__brand">
+
+        <img
+            src="../images/LitchLogo.png"
+            alt="Litch logo"
+        >
+
+        <h1 class="title">
+            Litch
+        </h1>
+
+    </div>
+
+
+    <nav class="litch-nav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a
+            href="game-store.html"
+            class="is-active"
+        >
+            Game Store
+        </a>
+
+        <a href="litch+.html">
+            Litch+
+        </a>
+
+        <a href="community.html">
+            Community
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="partners.html">
+            Partners
+        </a>
+
+        <a href="help-me.html">
+            Help-Me!
+        </a>
+
     </nav>
+
+
+    <button class="litch-search-btn" aria-label="Pesquisar jogos">
+        <svg viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M16.5 16.5L21 21"></path>
+        </svg>
+    </button>
 </header>
 
-<main id="conteudo">
 
-    <section class="intro">
-        <span class="eyebrow">GAME STORE / SELEÇÃO LITCH</span>
-        <h1>Produtos</h1>
-        <p class="lead">Menos procura.<br><em>Mais descobertas.</em></p>
-        <p>Encontre sua próxima história ou reúna a sua equipe. Um catálogo organizado para você escolher com calma.</p>
-        <a class="pill" href="#catalogo">Explorar o catálogo ↓</a>
-    </section>
+<hr>
 
-    <section class="spotlight">
-        <img src="../images/crimsondesert.jpg" alt="Arte do jogo Crimson Desert">
 
-        <section>
-            <span class="eyebrow">UM UNIVERSO EM DESTAQUE</span>
-            <h2>Crimson Desert</h2>
-            <p>Para quem gosta de cenários amplos, fantasia e aventura. Comece por este destaque e descubra outras experiências abaixo.</p>
-            <span class="tag">Mundo aberto</span>
-            <span class="tag">Aventura</span>
-            <p class="small">Catálogo demonstrativo: não realiza vendas.</p>
-        </section>
-    </section>
+<main>
 
-    <section id="catalogo" class="block">
 
-        <section class="section-head">
-            <section>
-                <span class="eyebrow">ESCOLHA SEU RITMO</span>
-                <h2>Qual é a sua próxima experiência?</h2>
-            </section>
+<section id="game-store">
+    <h2 class="litch-game-store__title">Game Store</h2>
 
-            <span class="muted">06 jogos selecionados</span>
-        </section>
+    <!-- Banner grande de destaque -->
+   <div class="litch-hero">
+    <img class="litch-hero__img" src="../images/crimsondesert.jpg" alt="Jogo em destaque">
+    <div class="litch-hero__scrim"></div>
+    <div class="litch-hero__content">
+        <span class="litch-hero__tag">Featured</span>
+        <h3 class="litch-hero__name">Crimson Desert</h3>
+        <p class="litch-hero__desc">RPG, Fighting, Open World, Adventure, Souls-like</p>
+        <div class="litch-hero__meta">
+            <span class="litch-hero__price">R$ 134,95</span>
+            <button class="litch-hero__cta">View Game</button>
+        </div>
+    </div>
+</div>
 
-        <nav class="categories" aria-label="Categorias do catálogo">
-            <a href="#aventura">Explorar uma história ↗</a>
-            <a href="#juntos">Jogar em companhia ↗</a>
-        </nav>
+<h3 class="litch-game-store__subtitle">Highlights</h3>
 
-        <section id="aventura" class="game-section">
-            <h3>01 / Para explorar uma história</h3>
+<!-- Carrossel de jogos em destaque -->
 
-            <section class="games">
-                <article class="game">
-                    <img loading="lazy" src="../images/eldenring.jpg" alt="Arte de Elden Ring">
+<div class="litch-store-carousel">
 
-                    <section class="game-copy">
-                        <span class="eyebrow">RPG · Exploração</span>
-                        <h4>Elden Ring</h4>
-                        <p>Um mundo de fantasia para explorar no seu ritmo, com desafios e caminhos para descobrir.</p>
+  <div class="js-carousel">
+    <div class="litch-store-carousel__track-wrap">
 
-                        <details>
-                            <summary>Sobre a experiência</summary>
-                            <p>Confira os requisitos e as condições de acesso na loja oficial do jogo antes de escolher. Esta apresentação faz parte de um projeto escolar.</p>
-                        </details>
-                    </section>
-                </article>
+  <button class="litch-carousel__arrow litch-carousel__arrow--prev" aria-label="Anterior">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
 
-                <article class="game">
-                    <img loading="lazy" src="../images/rdr2.jpeg" alt="Arte de Red Dead Redemption 2">
+  <div class="litch-store-carousel__track">
 
-                    <section class="game-copy">
-                        <span class="eyebrow">Aventura · Mundo aberto</span>
-                        <h4>Red Dead Redemption 2</h4>
-                        <p>Uma jornada pelo Velho Oeste, com personagens marcantes e um mundo cheio de histórias.</p>
+    <article class="litch-store-card" id="store-1">
+        <img class="litch-store-card__img" src="../images/peak.jpg" alt="Peak">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-20%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Peak</h4>
+            <p class="litch-store-card__genre">Adventure, COOP</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 39,90</span>
+                <span class="litch-store-card__price-new">R$ 7,98</span>
+            </div>
+        </div>
+    </article>
 
-                        <details>
-                            <summary>Sobre a experiência</summary>
-                            <p>Confira os requisitos e as condições de acesso na loja oficial do jogo antes de escolher. Esta apresentação faz parte de um projeto escolar.</p>
-                        </details>
-                    </section>
-                </article>
+    <article class="litch-store-card" id="store-2">
+        <img class="litch-store-card__img" src="../images/eafc26.jpg" alt="EA FC 26">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">EA FC 26</h4>
+            <p class="litch-store-card__genre">Sports</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 199,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-                <article class="game">
-                    <img loading="lazy" src="../images/cyberpunk.jpg" alt="Arte de Cyberpunk 2077">
+    <article class="litch-store-card" id="store-3">
+        <img class="litch-store-card__img" src="../images/crimsondesert.jpg" alt="Crimson Desert">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-45%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Crimson Desert</h4>
+            <p class="litch-store-card__genre">Open World, Souls-Like</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 299,90</span>
+                <span class="litch-store-card__price-new">R$ 134,95</span>
+            </div>
+        </div>
+    </article>
 
-                    <section class="game-copy">
-                        <span class="eyebrow">RPG · Ficção científica</span>
-                        <h4>Cyberpunk 2077</h4>
-                        <p>Explore Night City e construa seu estilo entre escolhas, tecnologia e ação.</p>
+    <article class="litch-store-card" id="store-4">
+        <img class="litch-store-card__img" src="../images/rdr2.jpeg" alt="Red Dead Redemption 2">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Red Dead Redemption 2</h4>
+            <p class="litch-store-card__genre">Shooter, Open World, History Mode</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 149,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-                        <details>
-                            <summary>Sobre a experiência</summary>
-                            <p>Confira os requisitos e as condições de acesso na loja oficial do jogo antes de escolher. Esta apresentação faz parte de um projeto escolar.</p>
-                        </details>
-                    </section>
-                </article>
-            </section>
-        </section>
+    <article class="litch-store-card" id="store-5">
+        <img class="litch-store-card__img" src="../images/csgo2.jpg" alt="Counter Strike 2">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-55%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Counter Strike 2</h4>
+            <p class="litch-store-card__genre">Shooter, Multiplayer</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 80,50</span>
+                <span class="litch-store-card__price-new">R$ 36,20</span>
+            </div>
+        </div>
+    </article>
 
-        <section id="juntos" class="game-section">
-            <h3>02 / Para jogar em companhia</h3>
+    <article class="litch-store-card" id="store-6">
+        <img class="litch-store-card__img" src="../images/dark-souls-3.jpg" alt="Dark Souls 3">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-50%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Dark Souls 3</h4>
+            <p class="litch-store-card__genre">Action, RPG, Souls-like</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 90,30</span>
+                <span class="litch-store-card__price-new">R$ 45,15</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-            <section class="games">
-                <article class="game">
-                    <img loading="lazy" src="../images/it-takes-two.jpg" alt="Arte de It Takes Two">
+    <article class="litch-store-card" id="store-7">
+        <img class="litch-store-card__img" src="../images/DEVOUR.jpg" alt="DEVOUR">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-50%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">DEVOUR</h4>
+            <p class="litch-store-card__genre">Horror</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 35,50</span>
+                <span class="litch-store-card__price-new">R$ 17,75</span>
+            </div>
+        </div>
+    </article>
 
-                    <section class="game-copy">
-                        <span class="eyebrow">Cooperativo · Plataforma</span>
-                        <h4>It Takes Two</h4>
-                        <p>Uma aventura para duas pessoas, em que cada fase pede uma nova forma de trabalhar em equipe.</p>
+    <article class="litch-store-card" id="store-8">
+        <img class="litch-store-card__img" src="../images/planetcoaster2.jpg" alt="Planet Coaster 2">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-50%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Planet Coaster 2</h4>
+            <p class="litch-store-card__genre">Building, Simulation</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 151,80</span>
+                <span class="litch-store-card__price-new">R$ 75,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-                        <details>
-                            <summary>Sobre a experiência</summary>
-                            <p>Confira os requisitos e as condições de acesso na loja oficial do jogo antes de escolher. Esta apresentação faz parte de um projeto escolar.</p>
-                        </details>
-                    </section>
-                </article>
+    <article class="litch-store-card" id="store-9">
+        <img class="litch-store-card__img" src="../images/ghostofyotei.webp" alt="Ghost of Yotei">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-45%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Ghost of Yotei</h4>
+            <p class="litch-store-card__genre">Adventure, History Mode, Samurai</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 249,90</span>
+                <span class="litch-store-card__price-new">R$ 112,45</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-                <article class="game">
-                    <img loading="lazy" src="../images/overwatch2.jpg" alt="Arte de Overwatch 2">
+    <article class="litch-store-card" id="store-10">
+        <img class="litch-store-card__img" src="../images/mortal_kombat_1_remake.jpg" alt="Mortal Kombat 1 - Remake">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-30%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Mortal Kombat 1 - Remake</h4>
+            <p class="litch-store-card__genre">Fighting</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 119,90</span>
+                <span class="litch-store-card__price-new">R$ 65,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
+    
+            <article class="litch-store-card" id="store-11">
+                <img class="litch-store-card__img" src="../images/gow-2018.jpg" alt="God of War (2018)">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">God of War (2018)</h4>
+            <p class="litch-store-card__genre">Action, Adventure</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 199,90</span>
+            </div>
+        </div>
+    </article>
 
-                    <section class="game-copy">
-                        <span class="eyebrow">Equipes · Ação</span>
-                        <h4>Overwatch 2</h4>
-                        <p>Heróis com habilidades diferentes se encontram em partidas baseadas em objetivos.</p>
+    <article class="litch-store-card" id="store-12">
+        <img class="litch-store-card__img" src="../images/horizon.jpg" alt="Horizon Forbidden West">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-25%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Horizon Forbidden West</h4>
+            <p class="litch-store-card__genre">Open World, Adventure</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 249,90</span>
+                <span class="litch-store-card__price-new">R$ 187,40</span>
+            </div>
+        </div>
+    </article>
 
-                        <details>
-                            <summary>Sobre a experiência</summary>
-                            <p>Confira os requisitos e as condições de acesso na loja oficial do jogo antes de escolher. Esta apresentação faz parte de um projeto escolar.</p>
-                        </details>
-                    </section>
-                </article>
+    <article class="litch-store-card" id="store-13">
+        <img class="litch-store-card__img" src="../images/spiderman2.jpg" alt="Marvel's Spider-Man 2">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Marvel's Spider-Man 2</h4>
+            <p class="litch-store-card__genre">Action, Superhero</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 249,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-                <article class="game">
-                    <img loading="lazy" src="../images/rocketleague.jpg" alt="Arte de Rocket League">
+    <article class="litch-store-card" id="store-14">
+        <img class="litch-store-card__img" src="../images/residentevil4.jpg" alt="Resident Evil 4 Remake">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-30%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Resident Evil 4 Remake</h4>
+            <p class="litch-store-card__genre">Survival Horror</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 199,90</span>
+                <span class="litch-store-card__price-new">R$ 139,90</span>
+            </div>
+        </div>
+    </article>
 
-                    <section class="game-copy">
-                        <span class="eyebrow">Esporte · Multiplayer</span>
-                        <h4>Rocket League</h4>
-                        <p>Carros e futebol em partidas rápidas que combinam precisão, movimento e trabalho em equipe.</p>
+    <article class="litch-store-card" id="store-15">
+        <img class="litch-store-card__img" src="../images/witcher3.jpg" alt="The Witcher 3: Wild Hunt">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">The Witcher 3: Wild Hunt</h4>
+            <p class="litch-store-card__genre">RPG, Open World</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 99,90</span>
+            </div>
+        </div>
+    </article>
 
-                        <details>
-                            <summary>Sobre a experiência</summary>
-                            <p>Confira os requisitos e as condições de acesso na loja oficial do jogo antes de escolher. Esta apresentação faz parte de um projeto escolar.</p>
-                        </details>
-                    </section>
-                </article>
-            </section>
-        </section>
-    </section>
+    <article class="litch-store-card" id="store-16">
+        <img class="litch-store-card__img" src="../images/deathstranding.jpg" alt="Death Stranding">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-20%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Death Stranding</h4>
+            <p class="litch-store-card__genre">Adventure, Sci-Fi</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 199,90</span>
+                <span class="litch-store-card__price-new">R$ 159,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-    <section class="quiet block">
-        <span class="eyebrow">ALÉM DO CATÁLOGO</span>
-        <h2>Uma ajuda para escolher melhor.</h2>
+    <article class="litch-store-card" id="store-17">
+        <img class="litch-store-card__img" src="../images/hollowknight.jpg" alt="Hollow Knight: Silksong">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Hollow Knight: Silksong</h4>
+            <p class="litch-store-card__genre">Metroidvania, Indie</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 89,90</span>
+            </div>
+        </div>
+    </article>
 
-        <section class="three">
-            <article>
-                <span class="number">01</span>
-                <h3>Curadoria de jogos</h3>
-                <p>Seleções por estilo para facilitar a descoberta de novas experiências.</p>
-            </article>
+    <article class="litch-store-card" id="store-18">
+        <img class="litch-store-card__img" src="../images/finalfantasyvii.jpg" alt="Final Fantasy VII Remake">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-35%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Final Fantasy VII Remake</h4>
+            <p class="litch-store-card__genre">RPG, JRPG</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 249,90</span>
+                <span class="litch-store-card__price-new">R$ 162,40</span>
+            </div>
+        </div>
+    </article>
 
-            <article>
-                <span class="number">02</span>
-                <h3>Guias e sugestões</h3>
-                <p>Conteúdos curtos para aproveitar melhor cada sessão.</p>
-                <a href="blog.html">Conhecer o Blog →</a>
-            </article>
+    <article class="litch-store-card" id="store-19">
+        <img class="litch-store-card__img" src="../images/sekiro.jpg" alt="Sekiro: Shadows Die Twice">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Sekiro: Shadows Die Twice</h4>
+            <p class="litch-store-card__genre">Action, Souls-like</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 199,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
 
-            <article>
-                <span class="number">03</span>
-                <h3>Ajuda e orientação</h3>
-                <p>Respostas sobre o catálogo e a proposta da plataforma.</p>
-                <a href="help-me.html">Consultar dúvidas →</a>
-            </article>
-        </section>
-    </section>
+    <article class="litch-store-card" id="store-20">
+        <img class="litch-store-card__img" src="../images/starwarsjedi.jpg" alt="Star Wars Jedi: Survivor">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-25%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Star Wars Jedi: Survivor</h4>
+            <p class="litch-store-card__genre">Action, Adventure</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 249,90</span>
+                <span class="litch-store-card__price-new">R$ 187,40</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="litch-store-card" id="store-21">
+        <img class="litch-store-card__img" src="../images/alanwake2.jpg" alt="Alan Wake 2">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Alan Wake 2</h4>
+            <p class="litch-store-card__genre">Survival Horror, Psychological</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 199,90</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="litch-store-card" id="store-22">
+        <img class="litch-store-card__img" src="../images/metaphor-refantazio.jpg" alt="Metaphor: ReFantazio">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-20%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Metaphor: ReFantazio</h4>
+            <p class="litch-store-card__genre">RPG, JRPG</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 299,90</span>
+                <span class="litch-store-card__price-new">R$ 239,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="litch-store-card" id="store-23">
+        <img class="litch-store-card__img" src="../images/silenthill2.jpg" alt="Silent Hill 2 (Remake)">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Silent Hill 2 (Remake)</h4>
+            <p class="litch-store-card__genre">Survival Horror</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 299,90</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="litch-store-card" id="store-24">
+        <img class="litch-store-card__img" src="../images/assassinscreedshadow.jpg" alt="Assassin's Creed Shadows">
+        <div class="litch-store-card__scrim"></div>
+        <span class="litch-store-card__discount">-30%</span>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Assassin's Creed Shadows</h4>
+            <p class="litch-store-card__genre">Open World, History Mode</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-old">R$ 299,90</span>
+                <span class="litch-store-card__price-new">R$ 209,90</span>
+            </div>
+        </div>
+    </article>
+
+    <article class="litch-store-card" id="store-25">
+        <img class="litch-store-card__img" src="../images/deathstranding2.jpg" alt="Death Stranding 2">
+        <div class="litch-store-card__scrim"></div>
+        <div class="litch-store-card__body">
+            <h4 class="litch-store-card__name">Death Stranding 2</h4>
+            <p class="litch-store-card__genre">Adventure, Sci-Fi</p>
+            <div class="litch-store-card__price">
+                <span class="litch-store-card__price-new">R$ 249,90</span>
+                <span class="litch-hero__plus">Litch+</span>
+            </div>
+        </div>
+        
+    </article>
+
+    
+  </div>
+
+  <button class="litch-carousel__arrow litch-carousel__arrow--next" aria-label="Próximo">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<div class="litch-carousel__dots"></div>
+
+  </div>
+</div>
+
+<!-- Online Games -->
+
+<section class="litch-store-section">
+    <div class="litch-store-carousel">
+        <h3 class="litch-game-store__subtitle">Online Games</h3>
+        <div class="js-carousel">
+    <div class="litch-store-carousel__track-wrap">
+
+  <button class="litch-carousel__arrow litch-carousel__arrow--prev" aria-label="Anterior">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+
+  <div class="litch-store-carousel__track">
+
+        <article class="litch-store-card" id="online-1">
+            <img class="litch-store-card__img" src="../images/minecraft.jpg" alt="Minecraft">
+            <div class="litch-store-card__scrim"></div>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Minecraft</h4>
+                <p class="litch-store-card__genre">Multiplayer, Adventure</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">R$ 59,90</span>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="litch-store-card" id="online-2">
+            <img class="litch-store-card__img" src="../images/csgo2.jpg" alt="Counter Strike 2">
+            <div class="litch-store-card__scrim"></div>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Counter Strike 2</h4>
+                <p class="litch-store-card__genre">Shooter, Multiplayer</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">R$ 36,20</span>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="litch-store-card" id="online-3">
+            <img class="litch-store-card__img" src="../images/seaofthieves.jpg" alt="Sea Of Thieves">
+            <div class="litch-store-card__scrim"></div>
+
+            <span class="litch-store-card__discount">-30%</span>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Sea Of Thieves</h4>
+                <p class="litch-store-card__genre">Adventure, COOP</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-old">R$ 149,90</span>
+                    <span class="litch-store-card__price-new">R$ 104,90</span>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="litch-store-card" id="online-4">
+            <img class="litch-store-card__img" src="../images/rematch.jpg" alt="Rematch">
+            <div class="litch-store-card__scrim"></div>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Rematch</h4>
+                <p class="litch-store-card__genre">Sports, Multiplayer</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">R$ 89,90</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="litch-store-card" id="online-5">
+            <img class="litch-store-card__img" src="../images/rdr2online.jpg" alt="Red Dead Redemption 2">
+            <div class="litch-store-card__scrim"></div>
+
+            <span class="litch-store-card__discount">-40%</span>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Red Dead Online</h4>
+                <p class="litch-store-card__genre">Shooter, Competitive</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-old">R$ 112,00</span>
+                    <span class="litch-store-card__price-new">R$ 67,20</span>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="litch-store-card" id="online-6">
+            <img class="litch-store-card__img" src="../images/deadbydaylight.jpg" alt="dbd">
+            <div class="litch-store-card__scrim"></div>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Dead By Daylight</h4>
+                <p class="litch-store-card__genre">Survival, Multiplayer</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">R$ 89,90</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="litch-store-card" id="online-7">
+            <img class="litch-store-card__img" src="../images/diablo4.jpg" alt="diablo4">
+            <div class="litch-store-card__scrim"></div>
+
+            <span class="litch-store-card__discount">-25%</span>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Diablo IV</h4>
+                <p class="litch-store-card__genre">RPG, Online</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-old">R$ 229,90</span>
+                    <span class="litch-store-card__price-new">R$ 172,40</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+
+        <article class="litch-store-card" id="online-8">
+            <img class="litch-store-card__img" src="../images/streetfighter6.jpg" alt="street fighter6">
+            <div class="litch-store-card__scrim"></div>
+
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Street Fighter 6</h4>
+                <p class="litch-store-card__genre">Fighting, Multiplayer</p>
+
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">R$ 99,90</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+                    <article class="litch-store-card" id="online-9">
+                        <img class="litch-store-card__img" src="../images/fortnite.jpg" alt="Fortnite">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Fortnite</h4>
+                <p class="litch-store-card__genre">Battle Royale, Multiplayer</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-10">
+            <img class="litch-store-card__img" src="../images/valorant.jpg" alt="Valorant">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Valorant</h4>
+                <p class="litch-store-card__genre">Tactical Shooter</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-11">
+            <img class="litch-store-card__img" src="../images/apexlegends.jpg" alt="Apex Legends">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Apex Legends</h4>
+                <p class="litch-store-card__genre">Battle Royale, Shooter</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-12">
+            <img class="litch-store-card__img" src="../images/leagueoflegends.jpg" alt="League of Legends">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">League of Legends</h4>
+                <p class="litch-store-card__genre">MOBA</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-13">
+            <img class="litch-store-card__img" src="../images/overwatch2.jpg" alt="Overwatch 2">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Overwatch 2</h4>
+                <p class="litch-store-card__genre">Hero Shooter</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-14">
+            <img class="litch-store-card__img" src="../images/rainbow6.jpg" alt="Rainbow Six Siege">
+            <div class="litch-store-card__scrim"></div>
+            <span class="litch-store-card__discount">-30%</span>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Rainbow Six Siege</h4>
+                <p class="litch-store-card__genre">Tactical Shooter</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-old">R$ 129,90</span>
+                    <span class="litch-store-card__price-new">R$ 90,90</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-15">
+            <img class="litch-store-card__img" src="../images/rocketleague.jpg" alt="Rocket League">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Rocket League</h4>
+                <p class="litch-store-card__genre">Sports, Multiplayer</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-16">
+            <img class="litch-store-card__img" src="../images/destiny2.jpg" alt="Destiny 2">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Destiny 2</h4>
+                <p class="litch-store-card__genre">Shooter, RPG</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-17">
+            <img class="litch-store-card__img" src="../images/warframe.jpg" alt="Warframe">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Warframe</h4>
+                <p class="litch-store-card__genre">Action, COOP</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-18">
+            <img class="litch-store-card__img" src="../images/pubg.jpg" alt="PUBG: Battlegrounds">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">PUBG: Battlegrounds</h4>
+                <p class="litch-store-card__genre">Battle Royale</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-19">
+            <img class="litch-store-card__img" src="../images/marvel-rivals.jpg" alt="Marvel Rivals">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Marvel Rivals</h4>
+                <p class="litch-store-card__genre">Hero Shooter</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-20">
+            <img class="litch-store-card__img" src="../images/helldivers2.jpg" alt="Helldivers 2">
+            <div class="litch-store-card__scrim"></div>
+            <span class="litch-store-card__discount">-20%</span>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Helldivers 2</h4>
+                <p class="litch-store-card__genre">Shooter, COOP</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">R$ 199,50</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-21">
+            <img class="litch-store-card__img" src="../images/fallguys.jpg" alt="Fall Guys">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Fall Guys</h4>
+                <p class="litch-store-card__genre">Party, Multiplayer</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">R$ 39,90</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-22">
+            <img class="litch-store-card__img" src="https://bnetcmsus-a.akamaihd.net/cms/page_media/VX8HQXPPHDBQ1541093978579.jpg" alt="World of Warcraft">
+            <div class="litch-store-card__scrim"></div>
+            <span class="litch-store-card__discount">-15%</span>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">World of Warcraft</h4>
+                <p class="litch-store-card__genre">MMORPG</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Extern Plan: R$ 44,50</span>
+                </div>
+            </div>
+        </article>
+
+        <article class="litch-store-card" id="online-23">
+            <img class="litch-store-card__img" src="../images/splitgate2.jpg" alt="Splitgate 2">
+            <div class="litch-store-card__scrim"></div>
+            <div class="litch-store-card__body">
+                <h4 class="litch-store-card__name">Splitgate 2</h4>
+                <p class="litch-store-card__genre">Shooter, Multiplayer</p>
+                <div class="litch-store-card__price">
+                    <span class="litch-store-card__price-new">Free</span>
+                    <span class="litch-hero__plus">Litch+</span>
+                </div>
+            </div>
+        </article>
+        
+  </div>
+
+  <button class="litch-carousel__arrow litch-carousel__arrow--next" aria-label="Próximo">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+</div>
+
+<div class="litch-carousel__dots"></div>
+
+  </div>
+</div>
+</section>
+
+<section class="litch-releases">
+    <h2 class="litch-releases__title">Categories</h2>
+
+<!-- inputs escondidos controlam qual aba aparece-->
+<input type="radio" name="litch-releases-tab" id="tab-popular" class="litch-releases__radio" checked>
+<input type="radio" name="litch-releases-tab" id="tab-bestsellers" class="litch-releases__radio">
+<input type="radio" name="litch-releases-tab" id="tab-anticipated" class="litch-releases__radio">
+<input type="radio" name="litch-releases-tab" id="tab-deals" class="litch-releases__radio">
+<input type="radio" name="litch-releases-tab" id="tab-free" class="litch-releases__radio">
+
+<nav class="litch-releases__nav">
+    <label for="tab-popular">Popular New Releases</label>
+    <label for="tab-bestsellers">Best Sellers</label>
+    <label for="tab-anticipated">Most Anticipated</label>
+    <label for="tab-deals">Deals</label>
+    <label for="tab-free">Popular Free Games</label>
+</nav>
+
+<!-- ================= Popular New Releases ================= -->
+<div class="litch-releases__panel litch-releases__panel--popular">
+    <div class="litch-release-row" data-steam-appid="3211430">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3211430/f31f9d5047355f830df9dfb1031847fc83cd0e52/header.jpg" alt="BRIGANDINE ABYSS" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">BRIGANDINE ABYSS</h3>
+            <p class="litch-release-row__genre">Turn-Based Strategy, Fantasy, Tactical RPG</p>
+            <p class="litch-release-row__date">Release: 26/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 154,99</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3946950">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3946950/15ece08bab35f4935d997dc44870d73aed3974bf/header.jpg" alt="Click the Button" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Click the Button</h3>
+            <p class="litch-release-row__genre">Casual, Indie, Incremental</p>
+            <p class="litch-release-row__date">Release: 26/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-15%</span>
+            <span class="litch-release-row__price-old">R$ 6,99</span>
+            <span class="litch-release-row__price-new">R$ 5,94</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4423580">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4423580/c7169de56a893cba3b8dba5674f6c4fe34ca96ab/header.jpg" alt="Shadow Dungeon" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Shadow Dungeon</h3>
+            <p class="litch-release-row__genre">Action RPG, Loot, Dark Fantasy</p>
+            <p class="litch-release-row__date">Release: 26/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-10%</span>
+            <span class="litch-release-row__price-old">R$ 37,49</span>
+            <span class="litch-release-row__price-new">R$ 33,74</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2827750">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/2827750/header.jpg" alt="Fatal Claw" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Fatal Claw</h3>
+            <p class="litch-release-row__genre">Metroidvania, Soulslike, 2D Platformer</p>
+            <p class="litch-release-row__date">Release: 26/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-20%</span>
+            <span class="litch-release-row__price-old">R$ 73,99</span>
+            <span class="litch-release-row__price-new">R$ 59,19</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4073860">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4073860/7650b13fcdd191929038fdbbfb2800ec0759bbca/header.jpg" alt="Sludgineers" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Sludgineers</h3>
+            <p class="litch-release-row__genre">Cozy, Cleaning, Incremental</p>
+            <p class="litch-release-row__date">Release: 25/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-20%</span>
+            <span class="litch-release-row__price-old">R$ 22,99</span>
+            <span class="litch-release-row__price-new">R$ 18,39</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="5060920">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/5060920/f520fd2030d70c700c48a3887c3c395658ba8d4f/header.jpg" alt="Dead by Daylight: Chorus of Sin" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Dead by Daylight: Chorus of Sin</h3>
+            <p class="litch-release-row__genre">Action, Horror</p>
+            <p class="litch-release-row__date">Release: 25/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 27,99</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4001350">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001350/62e4b5d1c76a7eabc83ff82a829567c31164eed2/header.jpg" alt="Iron Blight" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Iron Blight</h3>
+            <p class="litch-release-row__genre">Survival Horror, Post-Apocalyptic, 1990s</p>
+            <p class="litch-release-row__date">Release: 24/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-20%</span>
+            <span class="litch-release-row__price-old">R$ 33,99</span>
+            <span class="litch-release-row__price-new">R$ 27,19</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4486870">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4486870/a99760a2cd99cda5382ec1aae78a4c45421f9b0e/header.jpg" alt="FEED THE AI" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">FEED THE AI</h3>
+            <p class="litch-release-row__genre">Incremental, Casual, Simulation</p>
+            <p class="litch-release-row__date">Release: 24/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-20%</span>
+            <span class="litch-release-row__price-old">R$ 19,99</span>
+            <span class="litch-release-row__price-new">R$ 15,99</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4131730">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4131730/1b262360aa9cfa7ce376b2677b3c641556a7254f/header.jpg" alt="VHOLUME" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">VHOLUME</h3>
+            <p class="litch-release-row__genre">Parkour, First-Person, 3D Platformer</p>
+            <p class="litch-release-row__date">Release: 21/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-10%</span>
+            <span class="litch-release-row__price-old">R$ 30,00</span>
+            <span class="litch-release-row__price-new">R$ 27,00</span>
+        </div>
+    </div>
+</div>
+
+<!-- ================= Best Sellers ================= -->
+<div class="litch-releases__panel litch-releases__panel--bestsellers">
+    <div class="litch-release-row" data-steam-appid="1174180">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Red Dead Redemption 2</h3>
+            <p class="litch-release-row__genre">Open World, Story Rich, Western</p>
+            <p class="litch-release-row__date">Release: 05/dec/2019</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-75%</span>
+            <span class="litch-release-row__price-old">R$ 299,90</span>
+            <span class="litch-release-row__price-new">R$ 74,97</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="381210">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/381210/header.jpg" alt="Dead by Daylight" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Dead by Daylight</h3>
+            <p class="litch-release-row__genre">Horror, Multiplayer, Survival Horror</p>
+            <p class="litch-release-row__date">Release: 14/jun/2016</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-60%</span>
+            <span class="litch-release-row__price-old">R$ 69,99</span>
+            <span class="litch-release-row__price-new">R$ 27,99</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4001890">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4001890/45c4ddff4901e32c4b8b643e1b97d0d01898d299/header.jpg" alt="How to Fish" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">How to Fish</h3>
+            <p class="litch-release-row__genre">Multiplayer, Online Co-Op, Fishing</p>
+            <p class="litch-release-row__date">Release: 20/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-38%</span>
+            <span class="litch-release-row__price-old">R$ 23,99</span>
+            <span class="litch-release-row__price-new">R$ 14,87</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="730">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg" alt="Counter-Strike 2" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Counter-Strike 2</h3>
+            <p class="litch-release-row__genre">FPS, Shooter, Competitive</p>
+            <p class="litch-release-row__date">Release: 21/aug/2012</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="1623730">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1623730/header.jpg" alt="Palworld" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Palworld</h3>
+            <p class="litch-release-row__genre">Open World, Survival, Creature Collector</p>
+            <p class="litch-release-row__date">Release: 09/jul/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-30%</span>
+            <span class="litch-release-row__price-old">R$ 88,99</span>
+            <span class="litch-release-row__price-new">R$ 62,29</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3240220">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/3240220/header.jpg" alt="Grand Theft Auto V Enhanced" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Grand Theft Auto V Enhanced</h3>
+            <p class="litch-release-row__genre">Open World, Action, Multiplayer</p>
+            <p class="litch-release-row__date">Release: 04/mar/2025</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-56%</span>
+            <span class="litch-release-row__price-old">R$ 224,90</span>
+            <span class="litch-release-row__price-new">R$ 98,95</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3321460">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/3321460/header.jpg" alt="Crimson Desert Enhanced" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Crimson Desert Enhanced</h3>
+            <p class="litch-release-row__genre">Open World, Action, Exploration</p>
+            <p class="litch-release-row__date">Release: 19/mar/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-20%</span>
+            <span class="litch-release-row__price-old">R$ 299,90</span>
+            <span class="litch-release-row__price-new">R$ 134,95</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="1551360">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1551360/header.jpg" alt="Forza Horizon 5" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Forza Horizon 5</h3>
+            <p class="litch-release-row__genre">Racing, Open World, Driving</p>
+            <p class="litch-release-row__date">Release: 08/nov/2021</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-60%</span>
+            <span class="litch-release-row__price-old">R$ 249,00</span>
+            <span class="litch-release-row__price-new">R$ 99,60</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2075800">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2075800/2c7d5dad080c4888faaa03c4a955136c50f5bfae/header.jpg" alt="STAR WARS Zero Company™" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">STAR WARS Zero Company™</h3>
+            <p class="litch-release-row__genre">Turn-Based Tactics, Strategy, Sci-Fi</p>
+            <p class="litch-release-row__date">Release: 27/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 199,00</span>
+        </div>
+    </div>
+</div>
+
+<!-- ================= Most Anticipated ================= -->
+<div class="litch-releases__panel litch-releases__panel--anticipated">
+    <div class="litch-release-row" data-steam-appid="2075800">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2075800/2c7d5dad080c4888faaa03c4a955136c50f5bfae/header.jpg" alt="STAR WARS Zero Company™" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">STAR WARS Zero Company™</h3>
+            <p class="litch-release-row__genre">Turn-Based Tactics, Strategy, Sci-Fi</p>
+            <p class="litch-release-row__date">Coming: 27/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 199,00</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3859630">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3859630/31d5f5ef4a143bf915429e307f37cab6e2939678/header.jpg" alt="METAL GEAR SOLID: MASTER COLLECTION Vol.2" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">METAL GEAR SOLID: MASTER COLLECTION Vol.2</h3>
+            <p class="litch-release-row__genre">Action, Adventure, Stealth</p>
+            <p class="litch-release-row__date">Coming: 27/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 284,90</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3751260">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3751260/a7062f3b59d491c2678e3fd7ce2672858e480641/header.jpg" alt="The Blood of Dawnwalker" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">The Blood of Dawnwalker</h3>
+            <p class="litch-release-row__genre">RPG, Open World, Dark Fantasy</p>
+            <p class="litch-release-row__date">Coming: 02/sep/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 303,50</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2713000">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2713000/fd497979801c646561040243e1aa64a73d11f13a/header.jpg" alt="Resonance: A Plague Tale Legacy" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Resonance: A Plague Tale Legacy</h3>
+            <p class="litch-release-row__genre">Action, Adventure, Puzzle</p>
+            <p class="litch-release-row__date">Coming: 27/aug/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 179,99</span>
+        </div>
+    </div>
+
+      <div class="litch-release-row">
+            <img 
+                class="litch-release-row__img"
+                src="https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg"
+                alt="Grand Theft Auto VI"
+                loading="lazy"
+            >
+
+            <div class="litch-release-row__info">
+                <h3 class="litch-release-row__name">Grand Theft Auto VI</h3>
+
+                <p class="litch-release-row__genre">
+                    Action, Adventure, Open World
+                </p>
+
+                <p class="litch-release-row__date">
+                    Coming: 19/nov/2026
+                </p>
+            </div>
+
+            <div class="litch-release-row__price">
+                <span class="litch-release-row__price-new">
+                    R$ 449,90
+                </span>
+            </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4317690">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4317690/43f965890a8f4e64917f20befc50a077036cc015/header.jpg" alt="Crimson Moon" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Crimson Moon</h3>
+            <p class="litch-release-row__genre">Action RPG, Online Co-Op, Soulslike</p>
+            <p class="litch-release-row__date">Coming: 01/sep/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">Coming soon</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="1867240">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg" alt="WARDOGS" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">WARDOGS</h3>
+            <p class="litch-release-row__genre">Action, Tactical, FPS</p>
+            <p class="litch-release-row__date">Coming: 10/sep/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 119,99</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2638890">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/2638890/header.jpg" alt="Onimusha: Way of the Sword" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Onimusha: Way of the Sword</h3>
+            <p class="litch-release-row__genre">Action, Action-Adventure, Swordplay</p>
+            <p class="litch-release-row__date">Coming: 03/sep/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 299,00</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4115450">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4115450/7f882f889630270d3d3fb93825ac6f55b55e7a6c/header.jpg" alt="Phantom Blade Zero" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Phantom Blade Zero</h3>
+            <p class="litch-release-row__genre">Action RPG, Martial Arts, Wuxia</p>
+            <p class="litch-release-row__date">Coming: 28/oct/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new">R$ 229,90</span>
+        </div>
+    </div>
+</div>
+
+<!-- ================= Deals ================= -->
+<div class="litch-releases__panel litch-releases__panel--deals">
+    <div class="litch-release-row" data-steam-appid="1174180">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1174180/header.jpg" alt="Red Dead Redemption 2" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Red Dead Redemption 2</h3>
+            <p class="litch-release-row__genre">Open World, Story Rich, Western</p>
+            <p class="litch-release-row__date">Release: 05/dec/2019</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-75%</span>
+            <span class="litch-release-row__price-old">R$ 299,90</span>
+            <span class="litch-release-row__price-new">R$ 74,97</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3240220">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/3240220/header.jpg" alt="Grand Theft Auto V Enhanced" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Grand Theft Auto V Enhanced</h3>
+            <p class="litch-release-row__genre">Open World, Action, Multiplayer</p>
+            <p class="litch-release-row__date">Release: 04/mar/2025</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-56%</span>
+            <span class="litch-release-row__price-old">R$ 224,90</span>
+            <span class="litch-release-row__price-new">R$ 98,95</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="1623730">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1623730/header.jpg" alt="Palworld" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Palworld</h3>
+            <p class="litch-release-row__genre">Open World, Survival, Creature Collector</p>
+            <p class="litch-release-row__date">Release: 09/jul/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-30%</span>
+            <span class="litch-release-row__price-old">R$ 88,99</span>
+            <span class="litch-release-row__price-new">R$ 62,29</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="1551360">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1551360/header.jpg" alt="Forza Horizon 5" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Forza Horizon 5</h3>
+            <p class="litch-release-row__genre">Racing, Open World, Driving</p>
+            <p class="litch-release-row__date">Release: 08/nov/2021</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-60%</span>
+            <span class="litch-release-row__price-old">R$ 249,00</span>
+            <span class="litch-release-row__price-new">R$ 99,60</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3321460">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/3321460/header.jpg" alt="ced" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Crimson Desert Enhanced</h3>
+            <p class="litch-release-row__genre">Open World, Action, Exploration</p>
+            <p class="litch-release-row__date">Release: 19/mar/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-20%</span>
+            <span class="litch-release-row__price-old">R$ 299,90</span>
+            <span class="litch-release-row__price-new">R$ 134,95</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="381210">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/381210/header.jpg" alt="Dead by Daylight" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Dead by Daylight</h3>
+            <p class="litch-release-row__genre">Horror, Multiplayer, Survival Horror</p>
+            <p class="litch-release-row__date">Release: 14/jun/2016</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-60%</span>
+            <span class="litch-release-row__price-old">R$ 69,99</span>
+            <span class="litch-release-row__price-new">R$ 27,99</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2483190">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2483190/aec13616ef2adf9908ab2bf185f6e0557d6603ef/header_alt_assets_3.jpg" alt="Forza Horizon 6" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Forza Horizon 6</h3>
+            <p class="litch-release-row__genre">Racing, Open World, Driving</p>
+            <p class="litch-release-row__date">Release: 18/may/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-15%</span>
+            <span class="litch-release-row__price-old">R$ 299,00</span>
+            <span class="litch-release-row__price-new">R$ 254,15</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2399830">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/2399830/header.jpg" alt="ARK: Survival Ascended" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">ARK: Survival Ascended</h3>
+            <p class="litch-release-row__genre">Survival, Open World, Dinosaurs</p>
+            <p class="litch-release-row__date">Release: 25/oct/2023</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-75%</span>
+            <span class="litch-release-row__price-old">R$ 220,00</span>
+            <span class="litch-release-row__price-new">R$ 55,00</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="607080">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/607080/header.jpg" alt="Psychonauts 2" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Psychonauts 2</h3>
+            <p class="litch-release-row__genre">3D Platformer, Story Rich, Psychological</p>
+            <p class="litch-release-row__date">Release: 24/aug/2021</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__discount">-85%</span>
+            <span class="litch-release-row__price-old">R$ 184,99</span>
+            <span class="litch-release-row__price-new">R$ 27,74</span>
+        </div>
+    </div>
+</div>
+
+<!-- ================= Popular Free Games ================= -->
+<div class="litch-releases__panel litch-releases__panel--free">
+    <div class="litch-release-row" data-steam-appid="730">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/730/header.jpg" alt="Counter-Strike 2" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Counter-Strike 2</h3>
+            <p class="litch-release-row__genre">FPS, Shooter, Competitive</p>
+            <p class="litch-release-row__date">Release: 21/aug/2012</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="570">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/570/header.jpg" alt="Dota 2" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Dota 2</h3>
+            <p class="litch-release-row__genre">MOBA, Multiplayer, Strategy</p>
+            <p class="litch-release-row__date">Release: 09/jul/2013</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="1665460">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1665460/header.jpg" alt="eFootball™" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">eFootball™</h3>
+            <p class="litch-release-row__genre">Football, Sports, Multiplayer</p>
+            <p class="litch-release-row__date">Release: 29/sep/2021</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="230410">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/230410/header.jpg" alt="Warframe" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Warframe</h3>
+            <p class="litch-release-row__genre">Looter Shooter, Action RPG, Co-Op</p>
+            <p class="litch-release-row__date">Release: 25/mar/2013</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2767030">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/2767030/header.jpg" alt="Marvel Rivals" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Marvel Rivals</h3>
+            <p class="litch-release-row__genre">Hero Shooter, Multiplayer, Third-Person</p>
+            <p class="litch-release-row__date">Release: 05/dec/2024</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="2139460">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/2139460/header.jpg" alt="Once Human" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Once Human</h3>
+            <p class="litch-release-row__genre">Open World, Survival, Multiplayer</p>
+            <p class="litch-release-row__date">Release: 09/jul/2024</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="1284210">
+        <img class="litch-release-row__img" src="https://cdn.akamai.steamstatic.com/steam/apps/1284210/header.jpg" alt="Guild Wars 2®" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Guild Wars 2®</h3>
+            <p class="litch-release-row__genre">MMORPG, Adventure, RPG</p>
+            <p class="litch-release-row__date">Release: 23/aug/2022</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="3679080">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3679080/86b4734355e3e43b8323426e69d127ce79bab888/header.jpg" alt="The Seven Deadly Sins: Origin" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">The Seven Deadly Sins: Origin</h3>
+            <p class="litch-release-row__genre">Open World, Anime, Action RPG</p>
+            <p class="litch-release-row__date">Release: 16/mar/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+
+    <div class="litch-release-row" data-steam-appid="4162040">
+        <img class="litch-release-row__img" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/4162040/e60db1b53e9e0161b0b827f32f902ced884d38c0/header_alt_assets_0.jpg" alt="Zenless Zone Zero" loading="lazy">
+        <div class="litch-release-row__info">
+            <h3 class="litch-release-row__name">Zenless Zone Zero</h3>
+            <p class="litch-release-row__genre">Anime, Action RPG, Adventure</p>
+            <p class="litch-release-row__date">Release: 16/jun/2026</p>
+        </div>
+        <div class="litch-release-row__price">
+            <span class="litch-release-row__price-new litch-release-row__price-new--free">Free</span>
+        </div>
+    </div>
+</div>
+
+</section>
+
+</section>
 
 </main>
 
+
 <footer class="litch-footer">
-    <p><strong>Litch</strong> — descubra seu próximo universo.</p>
-    <p>Projeto escolar · empresa fictícia · 2026</p>
-    <p>Gustavo de Toledo Gomes &amp; Lucas Baldan</p>
+
+    <p>
+        © 2026 Litch. All rights reserved.
+    </p>
+
+    <p>
+        Developed by
+        <strong>
+            Gustavo de Toledo Gomes & Lucas Baldan
+        </strong>
+    </p>
+    <a class="litch-footer__partners" href="parceiros.html">
+        Partners: VYRA — Julio Milheiro &amp; Bruno Barbosa
+    </a>
+
+<a href="help-me.html">
+        Help-Me!
+    </a>
+
 </footer>
 
+
+
+<!-- PREVIEW DOS JOGOS -->
+
+<aside
+    class="litch-game-preview"
+    id="litchGamePreview"
+    aria-hidden="true"
+>
+
+    <div class="litch-game-preview__topline">
+
+        <span class="litch-game-preview__eyebrow">
+            Litch Preview
+        </span>
+
+        <span
+            class="litch-game-preview__price"
+            id="litchPreviewPrice"
+        ></span>
+
+    </div>
+
+
+    <h3
+        class="litch-game-preview__title"
+        id="litchPreviewTitle"
+    >
+        Game
+    </h3>
+
+
+    <p
+        class="litch-game-preview__meta"
+        id="litchPreviewMeta"
+    ></p>
+
+
+    <div
+        class="litch-game-preview__tags"
+        id="litchPreviewTags"
+    ></div>
+
+
+    <a
+        class="litch-game-preview__video"
+        id="litchPreviewTrailer"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+
+        <img
+            id="litchPreviewVideoThumb"
+            src=""
+            alt="Prévia do trailer"
+        >
+
+        <span class="litch-game-preview__video-shade"></span>
+
+        <span
+            class="litch-game-preview__play"
+            aria-hidden="true"
+        >
+
+            <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+            </svg>
+
+        </span>
+
+        <span class="litch-game-preview__video-label">
+            Watch trailer
+        </span>
+
+    </a>
+
+
+    <div class="litch-game-preview__image-wrap">
+
+        <span class="litch-game-preview__media-label">
+            Game image
+        </span>
+
+        <img
+            class="litch-game-preview__image"
+            id="litchPreviewImage"
+            src=""
+            alt="Imagem adicional do jogo"
+        >
+
+    </div>
+
+</aside>
+
+
+<script
+    src="../js/animations.js"
+    defer>
+</script>
+
+<script
+    src="../js/animationsarrows_2.js"
+    defer>
+</script>
+
+<script src="../js/experience.js" defer></script>
 </body>
 </html>

@@ -1,79 +1,40 @@
-# 🎮 Litch
+# Litch
 
-Projeto escolar de uma plataforma fictícia voltada ao universo dos games, desenvolvido com foco em **Front-End**, organização visual, navegação entre páginas e experiência do usuário.
+Projeto front-end de uma plataforma gamer fictícia, desenvolvido como projeto escolar.
 
-A Litch reúne catálogo de jogos, assinatura Litch+, comunidade, parceiros, blog, FAQ e outras áreas em uma única interface.
+## Páginas
 
-## 🌐 Acesse o site
+- **Home** — destaques e atalhos para o ecossistema Litch.
+- **Game Store** — catálogo, destaques, jogos online e categorias.
+- **Litch+** — apresentação do serviço e biblioteca.
+- **Community** — avaliações e elementos interativos da comunidade.
+- **About** — missão, visão e apresentação da Litch.
+- **Partners** — parceria Litch × VYRA, com Julio Milheiro e Bruno Barbosa.
+- **Help-Me!** — área de ajuda e FAQ.
 
-**GitHub Pages:**  
-https://lzkkj.github.io/Litch_Vers-oFinal/
-
-## ✨ Principais áreas
-
-- **Home** — jogos em destaque e acesso rápido às principais áreas.
-- **Produtos** — catálogo demonstrativo de jogos.
-- **Litch+** — apresentação dos planos e benefícios da assinatura.
-- **Community** — área dedicada à comunidade.
-- **Sobre** — história, missão e proposta do projeto.
-- **Parceiros** — projetos e ideias conectados à Litch.
-- **Blog** — conteúdos, dicas e guias.
-- **FAQ / Help-Me** — perguntas frequentes e ajuda.
-- **Free Trial** — demonstração da experiência de teste do Litch+.
-- **Checkout** — interface demonstrativa de contratação do plano.
-
-## 🛠️ Tecnologias utilizadas
-
-- HTML5
-- CSS3
-- Git
-- GitHub
-- GitHub Pages
-
-## 📁 Estrutura do projeto
+## Estrutura
 
 ```text
-Litch_Vers-oFinal/
-├── index.html
-├── html/
-│   ├── index.html
-│   ├── sobre.html
-│   ├── game-store.html
-│   ├── parceiros.html
-│   ├── blog.html
-│   ├── litch_plus_plans.html
-│   ├── litch_freetrial.html
-│   ├── litch_plus_checkout.html
-│   ├── community.html
-│   └── help-me.html
-├── css/
-│   ├── style.css
-│   ├── static.css
-│   ├── home.css
-│   ├── editorial.css
-│   ├── faq.css
-│   └── payment-demo.css
-└── images/
+Litch/
+├── index.html          # redirecionamento para a Home
+├── html/               # páginas do site
+├── css/                # estilos globais e específicos
+├── js/                 # interações e animações
+├── images/             # imagens do projeto
+└── backend/            # protótipo de backend/chatbot
 ```
 
-O `index.html` da raiz redireciona automaticamente para a página principal localizada em `html/index.html`, permitindo a publicação correta através do GitHub Pages.
+## Tecnologias
 
-## 👨‍💻 Desenvolvedores
+HTML5, CSS3, JavaScript e Python (protótipo de backend).
 
-**Gustavo de Toledo Gomes**  
-**Lucas Baldan**
+## Desenvolvedores
 
-### Parceria com VYRA
+- Gustavo de Toledo Gomes
+- Lucas Baldan
 
-**Bruno Barbosa**  
-**Julio Milheiro**
+## Parceiro
 
-## 📚 Sobre o projeto
+**VYRA** — Julio Milheiro e Bruno Barbosa.
 
-A Litch foi criada como um projeto escolar para aplicar conhecimentos de desenvolvimento web e construção de interfaces. O site é uma demonstração acadêmica e não representa uma loja ou serviço comercial real.
-
-Os nomes, imagens e marcas de jogos utilizados no projeto pertencem aos seus respectivos proprietários.
-
----
-
-© 2026 Litch. Projeto desenvolvido para fins educacionais.
+> Projeto educacional/fictício. Marcas e jogos citados pertencem aos seus respectivos proprietários.

@@ -1,0 +1,1351 @@
+/* =========================================================
+   LITCH EXPERIENCE LAYER
+   Camada visual compartilhada: responsividade, microinterações
+   e animações reutilizáveis entre todas as páginas.
+========================================================= */
+
+:root {
+  --litch-cyan: #66d9ff;
+  --litch-cyan-2: #3aa8ff;
+  --litch-violet: #7c5cff;
+  --litch-violet-2: #9b78ff;
+  --litch-ink: #090912;
+  --litch-panel: rgba(17, 16, 31, 0.76);
+  --litch-line: rgba(255, 255, 255, 0.09);
+  --litch-text-soft: #9e9bac;
+  --litch-radius: 22px;
+  --pointer-x: 50vw;
+  --pointer-y: 30vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(520px circle at var(--pointer-x) var(--pointer-y), rgba(71, 173, 255, 0.055), transparent 66%),
+    linear-gradient(rgba(255,255,255,0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.012) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,.75), transparent 88%);
+}
+
+::selection {
+  background: rgba(102, 217, 255, 0.25);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--litch-cyan);
+  outline-offset: 4px;
+}
+
+/* ---------- Scrollbar ---------- */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(102, 217, 255, 0.42) rgba(255,255,255,0.04);
+}
+
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-track { background: rgba(255,255,255,0.025); }
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(102,217,255,.52), rgba(124,92,255,.52));
+  border: 2px solid #0b0b12;
+  border-radius: 999px;
+}
+
+/* =========================================================
+   HEADER / NAV
+========================================================= */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  isolation: isolate;
+  padding: 14px clamp(18px, 3vw, 42px);
+  background: rgba(9, 9, 18, 0.76);
+  border-bottom: 1px solid rgba(255,255,255,0.045);
+  box-shadow: 0 12px 38px rgba(0,0,0,0.22);
+  backdrop-filter: blur(20px) saturate(135%);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  transition: padding .3s ease, background .3s ease, box-shadow .3s ease;
+}
+
+body.is-scrolled header {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  background: rgba(8, 8, 16, 0.92);
+  box-shadow: 0 16px 44px rgba(0,0,0,0.34);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(102,217,255,.34), rgba(124,92,255,.36), transparent);
+  opacity: .65;
+}
+
+.header__brand {
+  flex-shrink: 0;
+}
+
+.header__brand img {
+  transition: transform .35s cubic-bezier(.22,1,.36,1), filter .35s ease;
+}
+
+.header__brand:hover img {
+  transform: rotate(-7deg) scale(1.08);
+  filter: drop-shadow(0 0 12px rgba(102,217,255,.28));
+}
+
+.litch-nav {
+  gap: clamp(12px, 2vw, 28px);
+}
+
+.litch-nav a {
+  position: relative;
+  padding: 9px 2px;
+  white-space: nowrap;
+}
+
+.litch-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 1px;
+  height: 2px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--litch-violet), var(--litch-cyan));
+  transition: left .28s ease, right .28s ease, box-shadow .28s ease;
+}
+
+.litch-nav a:hover::after,
+.litch-nav a.is-active::after {
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 12px rgba(102,217,255,.42);
+}
+
+.litch-search-btn {
+  flex-shrink: 0;
+  border: 1px solid transparent;
+}
+
+.litch-search-btn:hover {
+  border-color: rgba(102,217,255,.22);
+}
+
+/* Mobile navigation button, created by experience.js */
+.litch-menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 12px;
+  color: #fff;
+  background: rgba(255,255,255,.035);
+  cursor: pointer;
+}
+
+.litch-menu-toggle__lines,
+.litch-menu-toggle__lines::before,
+.litch-menu-toggle__lines::after {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transition: transform .3s ease, opacity .3s ease;
+}
+
+.litch-menu-toggle__lines { position: relative; display: block; }
+.litch-menu-toggle__lines::before,
+.litch-menu-toggle__lines::after { content: ""; position: absolute; left: 0; }
+.litch-menu-toggle__lines::before { top: -6px; }
+.litch-menu-toggle__lines::after { top: 6px; }
+
+body.nav-open .litch-menu-toggle__lines { background: transparent; }
+body.nav-open .litch-menu-toggle__lines::before { top: 0; transform: rotate(45deg); }
+body.nav-open .litch-menu-toggle__lines::after { top: 0; transform: rotate(-45deg); }
+
+/* =========================================================
+   GLOBAL ANIMATION SYSTEM
+========================================================= */
+.fx-reveal {
+  --reveal-x: 0px;
+  --reveal-y: 38px;
+  --reveal-scale: .985;
+  opacity: 0;
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
+  filter: blur(5px);
+  transition:
+    opacity .78s ease var(--fx-delay, 0ms),
+    transform .86s cubic-bezier(.22,1,.36,1) var(--fx-delay, 0ms),
+    filter .72s ease var(--fx-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.fx-reveal.fx-reveal--left { --reveal-x: -42px; --reveal-y: 0px; }
+.fx-reveal.fx-reveal--right { --reveal-x: 42px; --reveal-y: 0px; }
+
+.fx-reveal.is-visible {
+  --reveal-x: 0px;
+  --reveal-y: 0px;
+  --reveal-scale: 1;
+  opacity: 1;
+  transform: translate3d(0,0,0) scale(1);
+  filter: blur(0);
+}
+
+.fx-spotlight {
+  --spot-x: 50%;
+  --spot-y: 50%;
+  position: relative;
+  isolation: isolate;
+}
+
+.fx-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(360px circle at var(--spot-x) var(--spot-y), rgba(102,217,255,.12), transparent 58%);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.fx-spotlight:hover::before { opacity: 1; }
+
+.fx-tilt {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --tilt-lift: 0px;
+  transform: perspective(1000px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(var(--tilt-lift));
+  transform-style: preserve-3d;
+  transition: transform .16s ease-out, box-shadow .35s ease, border-color .35s ease;
+  will-change: transform;
+}
+
+.fx-tilt:hover { --tilt-lift: -5px; }
+
+/* Mantém o reveal e o tilt trabalhando juntos sem um sobrescrever o outro. */
+.fx-tilt.fx-reveal {
+  transform:
+    perspective(1000px)
+    translate3d(var(--reveal-x), var(--reveal-y), 0)
+    scale(var(--reveal-scale))
+    rotateX(var(--tilt-x))
+    rotateY(var(--tilt-y))
+    translateY(var(--tilt-lift));
+}
+
+/* =========================================================
+   SCROLL PROGRESS / CURSOR GLOW / BACK TO TOP
+========================================================= */
+.litch-scroll-progress {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--litch-violet), var(--litch-cyan));
+  box-shadow: 0 0 18px rgba(102,217,255,.55);
+}
+
+.litch-cursor-glow {
+  position: fixed;
+  z-index: 3;
+  width: 360px;
+  height: 360px;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: .2;
+  background: radial-gradient(circle, rgba(81,162,255,.22), rgba(124,92,255,.05) 44%, transparent 72%);
+  filter: blur(12px);
+  transform: translate3d(-50%, -50%, 0);
+  mix-blend-mode: screen;
+}
+
+.litch-back-top {
+  position: fixed;
+  z-index: 1100;
+  right: 22px;
+  bottom: 22px;
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(102,217,255,.25);
+  border-radius: 15px;
+  color: #fff;
+  background: rgba(12,12,24,.78);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 16px 34px rgba(0,0,0,.28);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  cursor: pointer;
+  transition: opacity .3s ease, visibility .3s ease, transform .3s ease, border-color .3s ease;
+}
+
+.litch-back-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.litch-back-top:hover {
+  transform: translateY(-3px);
+  border-color: rgba(102,217,255,.7);
+}
+
+/* =========================================================
+   GLOBAL SEARCH PALETTE
+========================================================= */
+.litch-search-palette {
+  position: fixed;
+  inset: 0;
+  z-index: 6000;
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  padding: min(13vh, 110px) 18px 30px;
+  background: rgba(5,5,12,.76);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .24s ease, visibility .24s ease;
+}
+
+.litch-search-palette.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.litch-search-palette__dialog {
+  width: min(760px, 100%);
+  max-height: min(720px, 78vh);
+  overflow: hidden;
+  border: 1px solid rgba(102,217,255,.18);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(22,20,40,.98), rgba(10,10,19,.98));
+  box-shadow: 0 40px 120px rgba(0,0,0,.56), 0 0 80px rgba(83,130,255,.08);
+  transform: translateY(-14px) scale(.985);
+  transition: transform .28s cubic-bezier(.22,1,.36,1);
+}
+
+.litch-search-palette.is-open .litch-search-palette__dialog {
+  transform: translateY(0) scale(1);
+}
+
+.litch-search-palette__top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.litch-search-palette__top svg {
+  width: 22px;
+  flex: 0 0 22px;
+  fill: none;
+  stroke: var(--litch-cyan);
+  stroke-width: 2;
+}
+
+.litch-search-palette__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  background: transparent;
+  font: 500 16px/1.2 'Inter', system-ui, sans-serif;
+}
+
+.litch-search-palette__input::placeholder { color: #767386; }
+
+.litch-search-palette__key {
+  padding: 4px 7px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 7px;
+  color: #8f8b9e;
+  font: 600 10px/1 'Inter', sans-serif;
+}
+
+.litch-search-palette__results {
+  max-height: min(580px, 64vh);
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.litch-search-result {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  align-items: center;
+  gap: 13px;
+  padding: 11px 12px;
+  border: 1px solid transparent;
+  border-radius: 13px;
+  color: #eeeef6;
+  background: transparent;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.litch-search-result:hover,
+.litch-search-result.is-active {
+  background: rgba(102,217,255,.065);
+  border-color: rgba(102,217,255,.16);
+  transform: translateX(3px);
+}
+
+.litch-search-result__icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 11px;
+  background: linear-gradient(135deg, rgba(124,92,255,.22), rgba(102,217,255,.12));
+  color: var(--litch-cyan);
+  font-weight: 800;
+}
+
+.litch-search-result__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.litch-search-result__text strong { display: block; font-size: 14px; }
+.litch-search-result__text span { display: block; margin-top: 3px; color: #858292; font-size: 11px; }
+.litch-search-result__go { color: #686575; font-size: 18px; }
+.litch-search-palette__empty { padding: 36px 18px; text-align: center; color: #858292; }
+
+.search-target-pulse { animation: searchTargetPulse 1.35s ease; }
+@keyframes searchTargetPulse {
+  0%,100% { box-shadow: inherit; }
+  40% { box-shadow: 0 0 0 2px rgba(102,217,255,.58), 0 0 48px rgba(102,217,255,.25); }
+}
+
+/* =========================================================
+   BUTTON POLISH / FOOTER
+========================================================= */
+.litch-hero__cta,
+.litch-plus-hero__cta,
+.litch-plan-card__cta,
+.litch-trial-submit,
+.home-final__button,
+.home-introduction__button,
+.community-final a,
+.plus-final__buttons a,
+.about-button {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.litch-hero__cta::after,
+.litch-plus-hero__cta::after,
+.litch-plan-card__cta::after,
+.litch-trial-submit::after,
+.home-final__button::after,
+.home-introduction__button::after,
+.community-final a::after,
+.plus-final__buttons a::after,
+.about-button::after {
+  content: "";
+  position: absolute;
+  inset: -80%;
+  z-index: -1;
+  background: linear-gradient(110deg, transparent 42%, rgba(255,255,255,.16) 50%, transparent 58%);
+  transform: translateX(-55%) rotate(8deg);
+  transition: transform .65s ease;
+}
+
+.litch-hero__cta:hover::after,
+.litch-plus-hero__cta:hover::after,
+.litch-plan-card__cta:hover::after,
+.litch-trial-submit:hover::after,
+.home-final__button:hover::after,
+.home-introduction__button:hover::after,
+.community-final a:hover::after,
+.plus-final__buttons a:hover::after,
+.about-button:hover::after {
+  transform: translateX(55%) rotate(8deg);
+}
+
+.litch-footer {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,.07);
+  background: linear-gradient(180deg, rgba(8,8,16,.4), rgba(6,6,13,.88));
+}
+
+.litch-footer::before {
+  content: "LITCH";
+  position: absolute;
+  right: -12px;
+  bottom: -42px;
+  color: rgba(255,255,255,.025);
+  font: 800 clamp(70px, 12vw, 170px)/1 'Chakra Petch', sans-serif;
+  letter-spacing: -7px;
+  pointer-events: none;
+}
+
+.litch-footer .litch-footer__partners {
+  margin-inline: 10px;
+  color: #9b97aa;
+}
+
+.litch-footer .litch-footer__partners:hover {
+  color: var(--litch-cyan);
+}
+
+/* =========================================================
+   HOME — editorial + kinetic cards
+========================================================= */
+body[data-page="home"] .litch-carousel {
+  position: relative;
+  isolation: isolate;
+  padding-top: clamp(46px, 7vw, 90px);
+}
+
+body[data-page="home"] .litch-carousel::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: min(720px, 75vw);
+  height: min(520px, 55vw);
+  left: -12vw;
+  top: 4vh;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(124,92,255,.13), transparent 68%);
+  filter: blur(18px);
+}
+
+body[data-page="home"] .litch-carousel__eyebrow,
+body[data-page="home"] .home-eyebrow {
+  text-shadow: 0 0 18px rgba(102,217,255,.26);
+}
+
+body[data-page="home"] .litch-carousel__title {
+  letter-spacing: -1.5px;
+}
+
+body[data-page="home"] .litch-card {
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 22px;
+  box-shadow: 0 22px 60px rgba(0,0,0,.22);
+}
+
+body[data-page="home"] .litch-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
+}
+
+body[data-page="home"] .litch-card:hover {
+  border-color: rgba(102,217,255,.28);
+  box-shadow: 0 28px 70px rgba(0,0,0,.34), 0 0 32px rgba(70,145,255,.07);
+}
+
+body[data-page="home"] .home-introduction {
+  position: relative;
+  overflow: hidden;
+  padding-inline: clamp(0px, 3vw, 34px);
+}
+
+body[data-page="home"] .home-introduction::after {
+  content: "";
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  width: 260px;
+  height: 260px;
+  border: 1px solid rgba(102,217,255,.11);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 0 34px rgba(124,92,255,.025), 0 0 0 68px rgba(102,217,255,.018);
+  pointer-events: none;
+}
+
+body[data-page="home"] .home-introduction__word {
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+
+body[data-page="home"] .home-explore-card {
+  box-shadow: 0 24px 65px rgba(0,0,0,.24);
+}
+
+body[data-page="home"] .home-explore-card__content h3 {
+  letter-spacing: -.5px;
+}
+
+body[data-page="home"] .home-final {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(124,92,255,.075), rgba(102,217,255,.025));
+}
+
+body[data-page="home"] .home-final::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%,-35%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(102,217,255,.11), transparent 67%);
+}
+
+/* =========================================================
+   GAME STORE — cinematic storefront
+========================================================= */
+body[data-page="store"] #game-store {
+  width: min(1460px, 94%);
+  margin-inline: auto;
+  padding-top: clamp(48px, 6vw, 84px);
+}
+
+body[data-page="store"] .litch-game-store__title {
+  margin-bottom: 32px;
+  font-size: clamp(42px, 7vw, 86px);
+  letter-spacing: -3px;
+  background: linear-gradient(100deg, #fff 35%, #8ecfff 72%, #8b78ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body[data-page="store"] .litch-hero {
+  min-height: clamp(430px, 55vw, 650px);
+  overflow: hidden;
+  border: 1px solid rgba(102,217,255,.18);
+  border-radius: 30px;
+  box-shadow: 0 40px 100px rgba(0,0,0,.38);
+}
+
+body[data-page="store"] .litch-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(115deg, rgba(255,255,255,.05), transparent 24%, transparent 76%, rgba(102,217,255,.04));
+}
+
+body[data-page="store"] .litch-hero__img {
+  transition: transform 1s cubic-bezier(.22,1,.36,1), filter .5s ease;
+}
+
+body[data-page="store"] .litch-hero:hover .litch-hero__img {
+  transform: scale(1.035);
+  filter: saturate(1.08) contrast(1.02);
+}
+
+body[data-page="store"] .litch-hero__content {
+  max-width: 650px;
+}
+
+body[data-page="store"] .litch-hero__name {
+  font-size: clamp(36px, 5.4vw, 72px);
+  letter-spacing: -2px;
+}
+
+body[data-page="store"] .litch-game-store__subtitle {
+  margin-top: clamp(62px, 8vw, 110px);
+  font-size: clamp(25px, 3vw, 38px);
+  letter-spacing: -.8px;
+}
+
+body[data-page="store"] .litch-store-card {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.07);
+  box-shadow: 0 18px 50px rgba(0,0,0,.2);
+}
+
+body[data-page="store"] .litch-store-card:hover {
+  border-color: rgba(102,217,255,.26);
+  box-shadow: 0 22px 55px rgba(0,0,0,.32), 0 0 24px rgba(102,217,255,.05);
+}
+
+body[data-page="store"] .litch-store-card__discount {
+  box-shadow: 0 7px 24px rgba(0,0,0,.26);
+}
+
+body[data-page="store"] .litch-releases {
+  margin-top: clamp(90px, 10vw, 140px);
+  padding: clamp(28px, 4vw, 52px);
+  border: 1px solid rgba(255,255,255,.055);
+  border-radius: 28px;
+  background: linear-gradient(145deg, rgba(255,255,255,.025), rgba(255,255,255,.008));
+}
+
+body[data-page="store"] .litch-releases__nav {
+  position: sticky;
+  top: 78px;
+  z-index: 20;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 15px;
+  background: rgba(10,10,20,.82);
+  backdrop-filter: blur(15px);
+}
+
+body[data-page="store"] .litch-release-row {
+  border-radius: 15px;
+  transition: transform .25s ease, background .25s ease, border-color .25s ease;
+}
+
+body[data-page="store"] .litch-release-row:hover {
+  transform: translateX(6px);
+  border-color: rgba(102,217,255,.18);
+}
+
+/* =========================================================
+   LITCH+ — luminous cloud / orbital identity
+========================================================= */
+body[data-page="plus"] .litch-plus-page {
+  width: min(1300px, 92%);
+  margin-inline: auto;
+  padding-top: clamp(50px, 7vw, 95px);
+}
+
+body[data-page="plus"] .litch-plus_title {
+  font-size: clamp(44px, 7vw, 90px);
+  letter-spacing: -4px;
+  margin-bottom: 28px;
+  background: linear-gradient(105deg, #fff, #aebcff 48%, #66d9ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body[data-page="plus"] .litch-plus-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 560px;
+  border: 1px solid rgba(125,108,255,.22);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 75% 45%, rgba(102,217,255,.11), transparent 24%),
+    radial-gradient(circle at 73% 45%, rgba(124,92,255,.18), transparent 46%),
+    linear-gradient(135deg, rgba(29,24,58,.94), rgba(9,10,20,.97));
+  box-shadow: 0 42px 110px rgba(0,0,0,.4);
+}
+
+body[data-page="plus"] .litch-plus-hero::before,
+body[data-page="plus"] .litch-plus-hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 15%;
+  top: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 1px solid rgba(102,217,255,.12);
+  transform: translate(50%,-50%);
+  animation: plusOrbit 13s linear infinite;
+}
+
+body[data-page="plus"] .litch-plus-hero::after {
+  width: 420px;
+  height: 420px;
+  border-color: rgba(124,92,255,.1);
+  animation-duration: 19s;
+  animation-direction: reverse;
+}
+
+@keyframes plusOrbit {
+  to { transform: translate(50%,-50%) rotate(360deg); }
+}
+
+body[data-page="plus"] .litch-plus-hero__headline {
+  font-size: clamp(38px, 5vw, 68px);
+  letter-spacing: -2px;
+  line-height: 1.02;
+}
+
+body[data-page="plus"] .litch-plus-hero__img {
+  animation: plusFloat 5.5s ease-in-out infinite;
+  filter: drop-shadow(0 25px 34px rgba(60,132,255,.18));
+}
+
+@keyframes plusFloat {
+  0%,100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-14px) rotate(1deg); }
+}
+
+body[data-page="plus"] .Litch-plus_previewtitle {
+  width: min(1300px, 92%);
+  margin: clamp(90px, 10vw, 140px) auto 34px;
+  font-size: clamp(28px, 4vw, 45px);
+}
+
+body[data-page="plus"] .litch-library {
+  width: min(1500px, 100%);
+  padding-block: 24px;
+}
+
+body[data-page="plus"] .litch-library__cover {
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.07);
+  box-shadow: 0 20px 55px rgba(0,0,0,.25);
+}
+
+body[data-page="plus"] .litch-library__row.is-paused .litch-library__track {
+  animation-play-state: paused !important;
+}
+
+body[data-page="plus"] .litch-library__row { cursor: pointer; }
+
+body[data-page="plus"] .plus-final {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(124,92,255,.14);
+  border-radius: 32px;
+  background: linear-gradient(135deg, rgba(124,92,255,.09), rgba(102,217,255,.03));
+}
+
+/* =========================================================
+   COMMUNITY — social wall + filters
+========================================================= */
+body[data-page="community"] .community-intro {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 0;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 32px;
+  padding: clamp(46px, 7vw, 86px);
+  background:
+    radial-gradient(circle at 83% 30%, rgba(102,217,255,.095), transparent 23%),
+    radial-gradient(circle at 82% 30%, rgba(124,92,255,.08), transparent 44%),
+    rgba(255,255,255,.012);
+}
+
+body[data-page="community"] .community-intro::after {
+  content: "★★★★★";
+  position: absolute;
+  right: clamp(22px, 5vw, 70px);
+  bottom: -18px;
+  color: rgba(102,217,255,.055);
+  font-size: clamp(58px, 10vw, 150px);
+  letter-spacing: 6px;
+  pointer-events: none;
+}
+
+body[data-page="community"] .community-intro h2 {
+  max-width: 760px;
+}
+
+body[data-page="community"] main > section:nth-of-type(2) {
+  width: min(1200px, 92%);
+  margin-inline: auto;
+}
+
+body[data-page="community"] .Community-title {
+  font-size: clamp(30px, 4vw, 46px);
+  margin-top: 80px;
+}
+
+body[data-page="community"] .litch-community-rating {
+  padding: 26px 28px;
+  border: 1px solid rgba(102,217,255,.1);
+  border-radius: 24px;
+  background: linear-gradient(145deg, rgba(102,217,255,.035), rgba(124,92,255,.025));
+}
+
+body[data-page="community"] .litch-community-rating__stars {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  letter-spacing: 0;
+}
+
+body[data-page="community"] .litch-community-rating__stars .rating-star {
+  display: inline-block;
+  color: rgba(102, 217, 255, .28);
+  font-size: 31px;
+  line-height: 1;
+  transform: translateY(6px) scale(.78) rotate(-9deg);
+  filter: drop-shadow(0 0 0 rgba(102,217,255,0));
+  transition:
+    color .35s ease,
+    transform .52s cubic-bezier(.22, 1.45, .36, 1),
+    filter .45s ease;
+}
+
+body[data-page="community"] .litch-community-rating__stars .rating-star.is-filled {
+  color: #66d9ff;
+  transform: translateY(0) scale(1) rotate(0deg);
+  filter: drop-shadow(0 0 9px rgba(102,217,255,.42));
+}
+
+body[data-page="community"] .litch-community-rating__stars.is-complete .rating-star {
+  filter: drop-shadow(0 0 6px rgba(102,217,255,.22));
+}
+
+.community-tools {
+  max-width: 1200px;
+  margin: 0 auto 26px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.community-tools__filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.community-tools button {
+  padding: 9px 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 999px;
+  color: #aaa7b5;
+  background: rgba(255,255,255,.025);
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.community-tools button:hover,
+.community-tools button.is-active {
+  color: #fff;
+  border-color: rgba(102,217,255,.28);
+  background: rgba(102,217,255,.08);
+  transform: translateY(-2px);
+}
+
+.community-tools__search {
+  min-width: min(100%, 280px);
+  padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+  outline: 0;
+  color: #fff;
+  background: rgba(255,255,255,.03);
+}
+
+.community-tools__search:focus { border-color: rgba(102,217,255,.35); }
+
+body[data-page="community"] .litch-review-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 205px;
+  border-radius: 20px;
+  box-shadow: 0 20px 55px rgba(0,0,0,.18);
+}
+
+body[data-page="community"] .litch-review-card::after {
+  content: "“";
+  position: absolute;
+  right: 18px;
+  bottom: -36px;
+  color: rgba(255,255,255,.035);
+  font: 800 140px/1 Georgia, serif;
+  pointer-events: none;
+}
+
+body[data-page="community"] .litch-review-card.is-filtered-out {
+  display: none;
+}
+
+body[data-page="community"] .community-final {
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 30px;
+  background: linear-gradient(135deg, rgba(102,217,255,.04), rgba(124,92,255,.055));
+}
+
+/* =========================================================
+   HELP — AI terminal + accordion knowledge base
+========================================================= */
+body[data-page="help"] .help-main {
+  width: min(1180px, 92%);
+  margin-inline: auto;
+}
+
+body[data-page="help"] .help-hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 110px) clamp(0px, 3vw, 32px) 70px;
+}
+
+body[data-page="help"] .help-hero::after {
+  content: "?";
+  position: absolute;
+  right: 2%;
+  top: 15px;
+  color: rgba(102,217,255,.035);
+  font: 800 clamp(130px, 22vw, 310px)/1 'Chakra Petch', sans-serif;
+  pointer-events: none;
+}
+
+body[data-page="help"] .litch-ai {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  border-color: rgba(102,217,255,.16);
+  box-shadow: 0 38px 100px rgba(0,0,0,.33), 0 0 60px rgba(77,139,255,.05);
+}
+
+body[data-page="help"] .litch-ai::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 18%, rgba(102,217,255,.025) 48%, transparent 78%);
+  transform: translateX(-100%);
+  animation: aiScan 7s ease-in-out infinite;
+}
+
+@keyframes aiScan {
+  0%,68%,100% { transform: translateX(-110%); }
+  82% { transform: translateX(110%); }
+}
+
+body[data-page="help"] .litch-ai__icon {
+  animation: aiPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes aiPulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(102,217,255,0); }
+  50% { box-shadow: 0 0 0 8px rgba(102,217,255,.045), 0 0 24px rgba(102,217,255,.13); }
+}
+
+body[data-page="help"] .litch-ai__suggestions button {
+  border-radius: 999px;
+}
+
+body[data-page="help"] .help-faq__grid {
+  align-items: start;
+}
+
+body[data-page="help"] .help-faq__grid article {
+  cursor: pointer;
+  border-radius: 18px;
+  transition: border-color .3s ease, background .3s ease, transform .3s ease;
+}
+
+body[data-page="help"] .help-faq__grid article:hover,
+body[data-page="help"] .help-faq__grid article.is-open {
+  transform: translateY(-3px);
+  border-color: rgba(102,217,255,.22);
+  background: rgba(102,217,255,.035);
+}
+
+body[data-page="help"] .help-faq__grid article.is-collapsible h3 {
+  position: relative;
+  padding-right: 28px;
+}
+
+body[data-page="help"] .help-faq__grid article.is-collapsible h3::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: -3px;
+  color: var(--litch-cyan);
+  font-size: 22px;
+  transition: transform .3s ease;
+}
+
+body[data-page="help"] .help-faq__grid article.is-open h3::after {
+  transform: rotate(45deg);
+}
+
+body[data-page="help"] .help-faq__grid article.is-collapsible p {
+  max-height: 0;
+  margin-top: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .38s ease, opacity .3s ease, margin .3s ease;
+}
+
+body[data-page="help"] .help-faq__grid article.is-open p {
+  max-height: 180px;
+  margin-top: 12px;
+  opacity: 1;
+}
+
+/* =========================================================
+   PLANS — premium comparison deck
+========================================================= */
+body[data-page="plans"] .litch-plans-page {
+  min-height: calc(100vh - 80px);
+}
+
+body[data-page="plans"] .litch-plans-page__content {
+  width: min(1240px, 92%);
+}
+
+body[data-page="plans"] .litch-plans-page__title {
+  font-size: clamp(44px, 7vw, 82px);
+  letter-spacing: -3px;
+  background: linear-gradient(100deg, #fff, #b9c7ff 58%, #66d9ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+body[data-page="plans"] .litch-plan-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  box-shadow: 0 28px 76px rgba(0,0,0,.3);
+}
+
+body[data-page="plans"] .litch-plan-card--featured {
+  transform: translateY(-12px);
+  box-shadow: 0 34px 90px rgba(0,0,0,.36), 0 0 60px rgba(96,99,255,.12);
+}
+
+body[data-page="plans"] .litch-plan-card.is-selected {
+  border-color: rgba(102,217,255,.7);
+  box-shadow: 0 34px 90px rgba(0,0,0,.38), 0 0 0 1px rgba(102,217,255,.28), 0 0 60px rgba(102,217,255,.12);
+}
+
+body[data-page="plans"] .litch-plan-card.is-selected::after {
+  content: "SELECTED";
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  color: var(--litch-cyan);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.litch-toast {
+  position: fixed;
+  z-index: 7000;
+  left: 50%;
+  bottom: 24px;
+  min-width: min(420px, calc(100% - 32px));
+  padding: 13px 16px;
+  border: 1px solid rgba(102,217,255,.2);
+  border-radius: 14px;
+  color: #e8e8f2;
+  background: rgba(10,10,20,.92);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.36);
+  text-align: center;
+  opacity: 0;
+  transform: translate(-50%, 14px);
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.litch-toast.is-visible { opacity: 1; transform: translate(-50%,0); }
+
+/* =========================================================
+   FREE TRIAL — checkout / HUD
+========================================================= */
+body[data-page="trial"] .litch-trial-page__content {
+  width: min(1240px, 92%);
+}
+
+body[data-page="trial"] .litch-trial-page__title {
+  font-size: clamp(40px, 6.5vw, 78px);
+  letter-spacing: -3px;
+}
+
+body[data-page="trial"] .litch-trial-checkout {
+  border-radius: 30px;
+  box-shadow: 0 40px 105px rgba(0,0,0,.35);
+}
+
+body[data-page="trial"] .litch-trial-summary {
+  border-radius: 22px;
+}
+
+body[data-page="trial"] .litch-trial-field input {
+  transition: border-color .25s ease, box-shadow .25s ease, background .25s ease, transform .25s ease;
+}
+
+body[data-page="trial"] .litch-trial-field input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 4px rgba(102,217,255,.055), 0 12px 30px rgba(0,0,0,.15);
+}
+
+body[data-page="trial"] .litch-trial-game {
+  border-radius: 20px;
+}
+
+body[data-page="trial"] .litch-trial-timeline__dot {
+  box-shadow: 0 0 0 0 rgba(102,217,255,.1);
+}
+
+body[data-page="trial"] .litch-trial-timeline__item.is-current .litch-trial-timeline__dot {
+  animation: timelinePulse 2.2s ease-out infinite;
+}
+
+@keyframes timelinePulse {
+  0% { box-shadow: 0 0 0 0 rgba(102,217,255,.26); }
+  75%,100% { box-shadow: 0 0 0 12px rgba(102,217,255,0); }
+}
+
+/* =========================================================
+   ABOUT — preserve its identity, only global chrome
+========================================================= */
+body[data-page="about"] .about-page {
+  position: relative;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 980px) {
+  header { gap: 12px; }
+
+  .litch-menu-toggle { display: flex; order: 3; }
+  .litch-search-btn { order: 2; margin-left: auto; }
+
+  .litch-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 16px;
+    right: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 18px;
+    background: rgba(10,10,20,.97);
+    box-shadow: 0 24px 60px rgba(0,0,0,.44);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-9px) scale(.985);
+    transform-origin: top;
+    transition: opacity .25s ease, visibility .25s ease, transform .25s ease;
+  }
+
+  body.nav-open .litch-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .litch-nav a {
+    padding: 12px 13px;
+    border-radius: 11px;
+    background: rgba(255,255,255,.025);
+  }
+
+  .litch-nav a::after { display: none; }
+  .litch-nav a.is-active { color: #fff; background: rgba(102,217,255,.085); }
+
+  body[data-page="store"] .litch-releases__nav { top: 68px; }
+}
+
+@media (max-width: 760px) {
+  .litch-cursor-glow { display: none; }
+
+  body[data-page="home"] .home-introduction::after { display: none; }
+  body[data-page="home"] .home-final { border-radius: 22px; }
+
+  body[data-page="store"] #game-store { width: 92%; }
+  body[data-page="store"] .litch-hero { min-height: 470px; border-radius: 22px; }
+  body[data-page="store"] .litch-releases { padding: 18px; border-radius: 22px; }
+  body[data-page="store"] .litch-releases__nav { position: static; overflow-x: auto; flex-wrap: nowrap; }
+  body[data-page="store"] .litch-releases__nav label { white-space: nowrap; }
+
+  body[data-page="plus"] .litch-plus-hero { min-height: auto; border-radius: 24px; }
+  body[data-page="plus"] .litch-plus-hero::before,
+  body[data-page="plus"] .litch-plus-hero::after { right: 50%; top: 66%; }
+
+  body[data-page="community"] .community-intro { border-radius: 24px; padding: 44px 24px; }
+  body[data-page="community"] .community-intro::after { opacity: .45; }
+  .community-tools { align-items: stretch; }
+  .community-tools__search { width: 100%; }
+
+  body[data-page="plans"] .litch-plan-card--featured { transform: none; }
+}
+
+@media (max-width: 560px) {
+  header { padding-inline: 14px; }
+
+  .header__brand .title { font-size: 20px; }
+  .header__brand img { max-width: 34px; }
+
+  .litch-nav { grid-template-columns: 1fr; max-height: calc(100vh - 92px); overflow-y: auto; }
+
+  .litch-search-palette { padding-top: 76px; }
+  .litch-search-palette__dialog { border-radius: 18px; }
+  .litch-search-palette__key { display: none; }
+
+  .litch-back-top { right: 14px; bottom: 14px; width: 42px; height: 42px; }
+
+  body[data-page="store"] .litch-hero { min-height: 420px; }
+  body[data-page="store"] .litch-hero__content { padding: 24px; }
+
+  body[data-page="community"] .community-intro { width: 92%; margin-top: 56px; }
+
+  body[data-page="help"] .help-main { width: 92%; }
+
+  .plus-final__buttons { flex-direction: column; }
+  .plus-final__buttons a { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+
+  .fx-reveal,
+  .fx-reveal.fx-reveal--left,
+  .fx-reveal.fx-reveal--right {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .litch-cursor-glow { display: none; }
+}
